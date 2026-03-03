@@ -1,117 +1,93 @@
 import React from 'react';
 import './Hero.css';
 import {
-    SiAdobeillustrator,
-    SiAdobephotoshop,
-    SiAdobepremierepro,
-    SiAdobeaftereffects,
-    SiFigma,
-    SiHtml5
+    SiFigma, SiAdobephotoshop, SiAdobeillustrator,
+    SiAdobepremierepro, SiAdobeaftereffects
 } from 'react-icons/si';
-import { BsBarChartFill } from 'react-icons/bs';
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { BsArrowRight, BsSearch } from 'react-icons/bs';
+
+// Note: Replace with your actual image paths
+import teamImage from '../assets/team-precision.png';
 
 const Hero = () => {
     return (
-        <section className="hero-section">
-            {/* Background Shapes */}
-            <div className="bg-shape-1"></div>
-            <div className="bg-shape-2"></div>
-            <div className="bg-shape-3"></div>
+        <section className="exact-hero">
+            {/* LEFT SIDEBAR: Socials */}
+            <div className="side-socials">
+                <a href="#"><FaFacebookF /></a>
+                <a href="#"><FaTwitter /></a>
+                <a href="#"><FaLinkedinIn /></a>
+                <a href="#"><FaInstagram /></a>
+            </div>
 
-            <div className="container position-relative h-100 p-0">
-                <div className="row align-items-center h-100 m-0">
+            <div className="container-fluid h-100">
+                <div className="row h-100 align-items-center">
 
-                    {/* Left Text Column */}
-                    <div className="col-lg-6 hero-text-col pt-5 pt-lg-0">
-                        <h1 className="hero-heading">Brownsofts LLC</h1>
-                        <p className="hero-subheading text-muted">Sparking Global Success in the Digital World</p>
-
-                        <div className="search-box mt-4">
-                            <input
-                                type="text"
-                                className="form-control px-4"
-                                placeholder="e. g. Mobile application"
-                            />
-                            <button className="btn btn-search">Search Now</button>
+                    {/* LEFT CONTENT: Text & Search */}
+                    <div className="col-lg-6 content-block">
+                        <div className="header-meta">
+                            <span className="orange-line"></span>
+                            <span className="meta-text">WE PROVIDE OUTSOURCED</span>
                         </div>
 
-                        <div className="popular-tags mt-4">
-                            <strong>Popular Tags :</strong>
-                            <span className="text-muted"> Graphics & Design , Video & Animation , Digital Marketing , Web Design & Development , Admin Support</span>
+                        <h1 className="main-title">
+                            Brownsofts LLC
+                        </h1>
+
+                        <p className="main-desc">
+                            Sparking Global Success in the Digital World.
+                        </p>
+
+                        <div className="search-box-container">
+                            <div className="exact-search">
+                                <input type="text" placeholder="e.g. Mobile application" />
+                                <button className="search-btn">Search Now</button>
+                            </div>
+                            <div className="tags-row">
+                                <strong>Popular Tags:</strong>
+                                <span>Graphics</span>, <span>Web</span>, <span>Admin</span>
+                            </div>
+                        </div>
+
+                        <div className="dual-actions">
+                            <button className="btn-solid">Get Started <BsArrowRight /></button>
+                            <button className="btn-outline">Contact Us <BsArrowRight /></button>
                         </div>
                     </div>
 
-                    {/* Right Image Column */}
-                    <div className="col-lg-6 position-relative hero-image-col mt-5 mt-lg-0">
-                        <div className="image-wrapper">
-                            {/* Central colored circle */}
-                            <div className="peach-circle"></div>
+                    {/* RIGHT CONTENT: Animated Portal */}
+                    <div className="col-lg-6 visual-block">
+                        <div className="portal-container">
+                            {/* The Background Rotating Dashed Circle */}
+                            <div className="rotating-dashed"></div>
 
-                            {/* Replace src with actual person image when available */}
-                            <img
-                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"
-                                alt="Professional woman with laptop"
-                                className="hero-person-img"
-                            />
+                            {/* The Orange Solid Background Shape */}
+                            <div className="orange-portal-bg"></div>
 
-                            {/* Floating Icons */}
-                            <div className="floating-icon icon-ai">
-                                <SiAdobeillustrator />
-                            </div>
-                            <div className="floating-icon icon-figma">
-                                <SiFigma />
-                            </div>
-                            <div className="floating-icon icon-ps">
-                                <SiAdobephotoshop />
-                            </div>
-                            <div className="floating-icon icon-pr">
-                                <SiAdobepremierepro />
-                            </div>
-                            <div className="floating-icon icon-seo">
-                                <BsBarChartFill color="#fff" /><span>SEO</span>
-                            </div>
-                            <div className="floating-icon icon-ae">
-                                <SiAdobeaftereffects />
-                            </div>
-                            <div className="floating-icon icon-html5">
-                                <SiHtml5 />
+                            {/* The Image Wrapper */}
+                            <div className="main-image-circle">
+                                <img src={teamImage} alt="Professional Team" />
                             </div>
 
-                            {/* Stats Card */}
+                            {/* Orbiting Icons */}
+                            <div className="floating-icon icon-1"><SiAdobeillustrator /></div>
+                            <div className="floating-icon icon-2"><SiAdobeaftereffects /></div>
+                            <div className="floating-icon icon-3"><SiAdobephotoshop /></div>
+                            <div className="floating-icon icon-4"><SiFigma /></div>
+
+                            {/* Stats Card Overlay */}
                             <div className="stats-card">
-                                <p className="stats-title mb-3">BrownSofts Have</p>
-
                                 <div className="stat-item">
-                                    <div className="stat-icon-wrapper bg-blue-light">
-                                        <span>🌟</span>
-                                    </div>
-                                    <div className="stat-text">
-                                        <h4>2876+</h4>
-                                        <p>Happy Clients</p>
-                                    </div>
+                                    <span className="s-val">2876+</span>
+                                    <span className="s-lab">Happy Clients</span>
                                 </div>
-
+                                <hr />
                                 <div className="stat-item">
-                                    <div className="stat-icon-wrapper bg-red-light">
-                                        <span>🎯</span>
-                                    </div>
-                                    <div className="stat-text">
-                                        <h4>4245+</h4>
-                                        <p>Completed Projects</p>
-                                    </div>
-                                </div>
-
-                                <div className="stat-item">
-                                    <div className="stat-icon-wrapper bg-yellow-light">
-                                        <span>🏆</span>
-                                    </div>
-                                    <div className="stat-text">
-                                        <h4>15+</h4>
-                                        <p>Years of Service</p>
-                                    </div>
+                                    <span className="s-val">15+</span>
+                                    <span className="s-lab">Years Service</span>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 

@@ -1,322 +1,343 @@
-.hero-section {
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+:root {
+    --exact-orange: #EF8545;
+    /* Matched from screenshot search button */
+    --exact-brown: #B38350;
+    /* Matched from screenshot background split */
+    --exact-text: #2D2D2D;
+    --exact-gray: #757575;
+}
+
+.exact-hero {
     position: relative;
+    height: 100vh;
     width: 100vw;
-    min-height: 100vh;
+    background: linear-gradient(to right, #ffffff 60%, var(--exact-orange) 60%);
+    font-family: 'Plus Jakarta Sans', sans-serif;
     overflow: hidden;
-    background-color: #f8f9fa;
-    /* slightly off-white */
+    display: flex;
 }
 
-/* Background Sweeping Shapes */
-.bg-shape-1,
-.bg-shape-2,
-.bg-shape-3 {
+/* SOCIAL SIDEBAR */
+.side-socials {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    background: white;
-    border-radius: 50% / 10%;
-    /* Creates a slight curved edge */
-    box-shadow: -15px 0 30px rgba(0, 0, 0, 0.03);
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    z-index: 100;
 }
 
-.bg-shape-1 {
-    left: 30%;
-    width: 100%;
-    z-index: 1;
+.side-socials a {
+    color: #999;
+    font-size: 1.1rem;
+    transition: 0.3s;
 }
 
-.bg-shape-2 {
-    left: 38%;
-    width: 100%;
-    background: #f4f5f6;
-    z-index: 2;
-    box-shadow: -20px 0 40px rgba(0, 0, 0, 0.04);
+.side-socials a:hover {
+    color: var(--exact-orange);
 }
 
-.bg-shape-3 {
-    left: 45%;
-    width: 100%;
-    background: #ffffff;
-    z-index: 3;
-    box-shadow: -25px 0 50px rgba(0, 0, 0, 0.05);
+/* CONTENT STYLING */
+.content-block {
+    padding-left: 100px;
+    padding-right: 50px;
 }
 
-/* Container should be above background shapes */
-.container {
-    z-index: 10;
+.header-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-/* Typography & Left Column */
-.hero-text-col {
-    padding-right: 5rem;
+.orange-line {
+    width: 40px;
+    height: 2px;
+    background: var(--exact-brown);
 }
 
-.hero-heading {
-    font-size: 4rem;
+.meta-text {
     font-weight: 700;
-    color: #1f1f1f;
-    margin-bottom: 1rem;
+    color: var(--exact-orange);
+    letter-spacing: 2px;
+    font-size: 0.85rem;
 }
 
-.hero-subheading {
-    font-size: 1.25rem;
-    font-weight: 400;
-    color: #6c757d;
+.main-title {
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--exact-text);
+    margin-bottom: 25px;
 }
 
-/* Search Box */
-.search-box {
+.main-desc {
+    color: var(--exact-gray);
+    max-width: 480px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* SEARCH BOX */
+.search-box-container {
+    margin: 40px 0;
+}
+
+.exact-search {
     display: flex;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     overflow: hidden;
     max-width: 500px;
+    border: 1px solid #eee;
 }
 
-.search-box input {
+.exact-search input {
+    flex: 1;
     border: none;
-    font-size: 1rem;
-    box-shadow: none;
-}
-
-.search-box input:focus {
+    padding: 15px 25px;
     outline: none;
-    box-shadow: none;
 }
 
-.btn-search {
-    background-color: var(--primary-color);
+.search-btn {
+    background: var(--exact-orange);
     color: white;
-    font-weight: 600;
-    padding: 0.8rem 2rem;
-    border-radius: 0 8px 8px 0;
     border: none;
+    padding: 0 30px;
+    font-weight: 700;
 }
 
-.btn-search:hover {
-    background-color: #e0692d;
-    color: white;
+.tags-row {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: var(--exact-gray);
 }
 
-.popular-tags {
-    font-size: 0.9rem;
+.tags-row span {
+    color: var(--exact-brown);
+    margin: 0 5px;
+    cursor: pointer;
 }
 
-.popular-tags strong {
-    color: #333;
+/* DUAL BUTTONS */
+.dual-actions {
+    display: flex;
+    gap: 20px;
 }
 
-.popular-tags span {
-    color: #888;
-}
-
-/* Right Column : Image & Circles */
-.hero-image-col {
-    height: 100%;
+.btn-solid,
+.btn-outline {
+    padding: 15px 35px;
+    border-radius: 100px;
+    font-weight: 700;
     display: flex;
     align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.btn-solid {
+    background: var(--exact-orange);
+    color: white;
+    border: none;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--exact-orange);
+    border: 2px solid var(--exact-orange);
+}
+
+.btn-solid:hover {
+    transform: translateY(-3px);
+}
+
+/* VISUAL PORTAL & ANIMATIONS */
+.visual-block {
+    height: 100%;
+    display: flex;
     justify-content: center;
-}
-
-.image-wrapper {
+    align-items: center;
     position: relative;
-    width: 500px;
-    height: 500px;
 }
 
-.peach-circle {
+.portal-container {
+    position: relative;
+    width: 550px;
+    height: 550px;
+}
+
+.rotating-dashed {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 450px;
-    height: 450px;
-    background-color: #f7c598;
-    /* Peach color matching screenshot */
+    inset: -30px;
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    animation: rotateSlow 20s linear infinite;
+}
+
+@keyframes rotateSlow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.orange-portal-bg {
+    position: absolute;
+    inset: 0;
+    background: #ec7d05;
+    /* Lighter orange from screenshot 1 */
     border-radius: 50%;
     z-index: 1;
 }
 
-.hero-person-img {
+.main-image-circle {
     position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 110%;
-    /* Pops out of the circle slightly */
+    inset: 15px;
+    border-radius: 50%;
+    overflow: hidden;
     z-index: 2;
-    object-fit: contain;
-    /* Assuming mask/cutout */
+    border: 10px solid white;
 }
 
-/* Floating Icons */
+.main-image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FLOATING ICONS */
 .floating-icon {
     position: absolute;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+    width: 55px;
+    height: 55px;
     background: white;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    z-index: 3;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 10;
     font-size: 1.5rem;
+    animation: floatMove 4s infinite ease-in-out;
 }
 
-/* Specific icon positions (roughly matching screenshot) */
-.icon-ai {
-    top: -20px;
-    left: 100px;
-    color: #ff9a00;
-    background: #330000;
-    box-shadow: 0 0 0 3px white, 0 4px 10px rgba(0, 0, 0, 0.2);
+@keyframes floatMove {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
-.icon-figma {
-    top: 50px;
-    left: 20px;
-}
-
-.icon-ps {
-    top: 180px;
-    left: -10px;
-    color: #31a8ff;
-    background: #001e36;
-    box-shadow: 0 0 0 3px white, 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.icon-seo {
-    top: 100px;
-    right: 20px;
-    background: #000066;
-    color: white;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    box-shadow: 0 0 0 3px white, 0 4px 10px rgba(0, 0, 0, 0.2);
-    flex-direction: column;
-    font-size: 1.2rem;
-    line-height: 1;
-}
-
-.icon-seo span {
-    font-size: 0.5rem;
-    font-weight: bold;
-    margin-top: 2px;
-}
-
-.icon-pr {
-    top: -20px;
-    right: 60px;
-    color: #9999ff;
-    background: #000033;
-    box-shadow: 0 0 0 3px white, 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.icon-ae {
-    top: 250px;
-    right: 0px;
-    color: #9999ff;
-    background: #000033;
-    box-shadow: 0 0 0 3px white, 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.icon-html5 {
-    bottom: 80px;
+.icon-1 {
+    top: 10%;
     right: -10px;
-    color: white;
-    background: #e34f26;
-    box-shadow: 0 0 0 3px white, 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: #FF9A00;
 }
 
-
-/* Additional styling for Figma default color since it's an svg icon */
-.icon-figma svg {
-    color: #f24e1e;
+.icon-2 {
+    bottom: 20%;
+    right: -20px;
+    color: #D291FF;
+    animation-delay: 1s;
 }
 
-/* I'll use inline styles or specific color overrides if the react-icon doesn't have the exact color */
+.icon-3 {
+    top: 40%;
+    left: -30px;
+    color: #31A8FF;
+    animation-delay: 2s;
+}
 
-/* Stats Card */
+.icon-4 {
+    top: 0;
+    left: 20%;
+    color: #F24E1E;
+    animation-delay: 1.5s;
+}
+
+/* STATS OVERLAY */
 .stats-card {
     position: absolute;
-    bottom: 30px;
+    bottom: 50px;
     left: -80px;
-    background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    z-index: 4;
-    width: 260px;
-    background-color: #f3ece6;
-    /* Slight tan tint */
-}
-
-.stats-title {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #555;
+    background: #F3EBE3;
+    /* Cream background from screenshot 1 */
+    padding: 25px;
+    border-radius: 20px;
+    z-index: 20;
+    min-width: 200px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .stat-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+    text-align: left;
+    margin: 10px 0;
 }
 
-.stat-item:last-child {
-    margin-bottom: 0;
+.s-val {
+    display: block;
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #333;
 }
 
-.stat-icon-wrapper {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1rem;
-    background: white;
+.s-lab {
+    font-size: 0.8rem;
+    color: var(--exact-gray);
 }
 
-.stat-text h4 {
-    margin: 0;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #222;
-}
-
-.stat-text p {
-    margin: 0;
-    font-size: 0.75rem;
-    color: #666;
-}
-
-/* Responsive adjustments */
-@media (max-width: 991px) {
-
-    .bg-shape-1,
-    .bg-shape-2,
-    .bg-shape-3 {
-        display: none;
-        /* Simplify on mobile for now */
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .exact-hero {
+        background: white;
+        height: auto;
+        padding-top: 80px;
     }
 
-    .hero-text-col {
-        padding-right: 1rem;
-        padding-left: 1rem;
+    .side-socials {
+        display: none;
+    }
+
+    .content-block {
+        padding-left: 5%;
+        padding-right: 5%;
         text-align: center;
     }
 
-    .search-box {
-        margin: 0 auto;
+    .main-desc,
+    .exact-search,
+    .dual-actions {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .visual-block {
+        margin-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .portal-container {
+        width: 350px;
+        height: 350px;
     }
 
     .stats-card {
-        left: 20px;
-        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -20px;
     }
 }
