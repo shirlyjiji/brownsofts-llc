@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 // 1. Add Bootstrap imports
-import { Container, Row, Col } from 'react-bootstrap'; 
+import { Container, Row, Col } from 'react-bootstrap';
 // 2. Add Lucide icon imports for the categories section
 import { Globe, PlayCircle, Palette, Zap, Layers } from 'lucide-react';
 import {
@@ -110,11 +110,11 @@ const Hero = () => {
 
                     <Row className="justify-content-center">
                         {[
-                            { name: "Web Dev", icon: <Globe size={32} />, count: "120+ Projects", color: "#1A1A1A" },
-                            { name: "Animation", icon: <PlayCircle size={32} />, count: "85+ Projects", color: "#eb690c" },
-                            { name: "Graphics", icon: <Palette size={32} />, count: "200+ Designs", color: "#1A1A1A" },
-                            { name: "Marketing", icon: <Zap size={32} />, count: "50+ Campaigns", color: "#eb690c" },
-                            { name: "UI Apps", icon: <Layers size={32} />, count: "40+ Apps", color: "#1A1A1A" }
+                            { name: "Web Dev", icon: <Globe size={32} />, count: "120+ Projects", color: "#001d3d" }, // Dark Blue
+                            { name: "Animation", icon: <PlayCircle size={32} />, count: "85+ Projects", color: "#ff5e14" }, // Orange
+                            { name: "Graphics", icon: <Palette size={32} />, count: "200+ Designs", color: "#001d3d" }, // Dark Blue
+                            { name: "Marketing", icon: <Zap size={32} />, count: "50+ Campaigns", color: "#ff5e14" }, // Orange
+                            { name: "UI Apps", icon: <Layers size={32} />, count: "40+ Apps", color: "#001d3d" } // Dark Blue
                         ].map((cat, index) => (
                             <Col key={index} xs={6} md={4} lg={2} className="mb-4">
                                 <div className="br-category-card text-center">
@@ -124,7 +124,8 @@ const Hero = () => {
                                         </div>
                                         <div className="br-orbit-border"></div>
                                     </div>
-                                    <h6 className="fw-bold mt-3 mb-0">{cat.name}</h6>
+                                    {/* Applied text-blue variable here */}
+                                    <h6 className="category-title mt-3 mb-0">{cat.name}</h6>
                                     <small className="text-muted">{cat.count}</small>
                                 </div>
                             </Col>

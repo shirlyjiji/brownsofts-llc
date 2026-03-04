@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
 
 :root {
-    --exact-orange: #EF8545;
-    /* Matched from screenshot search button */
+    --exact-orange: #ff5e14;
+    /* Updated to your new orange */
+    --brand-dark-blue: #001d3d;
+    /* New Dark Blue */
+    --brand-text-blue: #1f2937;
+    /* New Text Blue */
     --exact-brown: #B38350;
-    /* Matched from screenshot background split */
     --exact-text: #2D2D2D;
     --exact-gray: #757575;
 }
@@ -344,6 +347,21 @@
 
 
 /* KINETIC CATEGORIES */
+
+.br-kinetic-section h2 {
+    color: var(--brand-dark-blue);
+}
+
+.br-header-line::after {
+    background: var(--exact-orange);
+}
+
+/* Category Specific Styling */
+.category-title {
+    color: var(--brand-text-blue) !important;
+    font-weight: 700;
+}
+
 .br-orbit-wrapper {
     position: relative;
     width: 100px;
@@ -370,7 +388,7 @@
     position: absolute;
     width: 95px;
     height: 95px;
-    border: 1px dashed var(--exact-orange);
+    border: 1px dashed var(--exact-orange); /* Use Brand Orange */
     border-radius: 50%;
     opacity: 0;
     transition: 0.5s ease;
