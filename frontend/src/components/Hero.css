@@ -463,3 +463,140 @@
         bottom: -60px;
     }
 }
+
+
+/* --- RESPONSIVE REFINEMENTS --- */
+
+/* For Large Tablets / Small Laptops */
+@media (max-width: 1200px) {
+    .content-block {
+        padding-left: 80px;
+        /* Reduce left spacing */
+    }
+
+    .portal-container {
+        width: 450px;
+        /* Scale down the circle */
+        height: 450px;
+    }
+
+    .stats-card {
+        left: 80px;
+        gap: 20px;
+        padding: 15px 25px;
+    }
+}
+
+/* For Tablets (Portrait) */
+@media (max-width: 991px) {
+    .exact-hero {
+        padding-top: 80px;
+        padding-bottom: 120px;
+        /* Space for the stacked card */
+        height: auto;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    .side-socials {
+        left: 20px;
+        /* Move socials tighter to edge */
+        gap: 20px;
+    }
+
+    .content-block {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .main-desc {
+        margin: 0 auto 30px;
+        border-left: none;
+        border-top: 3px solid var(--brand-orange);
+        padding-left: 0;
+        padding-top: 15px;
+    }
+
+    .dual-actions {
+        justify-content: center;
+    }
+
+    .slider-nav {
+        justify-content: center;
+    }
+
+    .visual-block {
+        width: 100%;
+    }
+
+    .portal-container {
+        width: 380px;
+        /* Smaller circle for tablet */
+        height: 380px;
+    }
+
+    /* Floating icons scale down so they don't overlap as much */
+    .floating-logo-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+
+    .stats-card {
+        position: relative;
+        /* Switch from absolute to relative to sit below content */
+        bottom: 0;
+        left: 0;
+        margin: 60px auto 0;
+        width: 90%;
+        max-width: 500px;
+        flex-direction: row;
+        /* Keep it as a row on tablets */
+        justify-content: space-around;
+        transform: none;
+    }
+}
+
+/* For Mobile Phones */
+@media (max-width: 576px) {
+    .main-title {
+        font-size: 2.8rem;
+        /* Fit title on small screens */
+    }
+
+    .portal-container {
+        width: 280px;
+        /* Smallest circle for mobile */
+        height: 280px;
+    }
+
+    .main-image-circle {
+        inset: 25px;
+        /* Thinner border look */
+    }
+
+    .stats-card {
+        flex-direction: column;
+        /* Stack stats on small phones */
+        align-items: flex-start;
+        padding: 25px;
+        gap: 15px;
+    }
+
+    .stat-divider {
+        width: 100%;
+        height: 1px;
+    }
+
+    .side-socials {
+        display: none;
+        /* Hide sidebar socials on very small screens to save space */
+    }
+
+    .btn-solid,
+    .btn-outline {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
