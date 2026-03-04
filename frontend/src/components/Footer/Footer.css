@@ -1,5 +1,5 @@
 .footer {
-    background-color: #0B2A4A; /* Requested dark blue background */
+    background-color: #001d3d; /* New dark blue background */
     color: #ffffff;
     padding: 80px 0 0;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -29,7 +29,7 @@
 }
 
 .footer-logo img {
-    height: 30px;
+    height: 45px;
     width: auto;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .social-icon:hover {
-    background-color: #FF6A00; /* Requested orange accent */
+    background-color: #ff5e14; /* New orange accent */
     transform: translateY(-3px);
 }
 
@@ -82,7 +82,7 @@
     bottom: -8px;
     width: 30px;
     height: 2px;
-    background-color: #FF6A00; /* Requested orange accent */
+    background-color: #ff5e14; /* New orange accent */
 }
 
 /* Links List */
@@ -105,7 +105,7 @@
 }
 
 .footer-links a:hover {
-    color: #FF6A00; /* Requested orange accent */
+    color: #ff5e14; /* New orange accent */
 }
 
 /* Contact Column */
@@ -126,7 +126,7 @@
 }
 
 .contact-icon {
-    color: #FF6A00; /* Requested orange accent */
+    color: #ff5e14; /* New orange accent */
     font-size: 1.1rem;
     margin-top: 3px;
     flex-shrink: 0;
@@ -134,7 +134,7 @@
 
 /* Footer Bottom Bar */
 .footer-bottom {
-    background-color: #081d33; /* Darker blue for the bottom bar */
+    background-color: #00152b; /* Slightly darker than #001d3d */
     padding: 25px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -167,7 +167,7 @@
 }
 
 .footer-legal a:hover {
-    color: #FF6A00;
+    color: #ff5e14;
 }
 
 /* Responsive Design */
