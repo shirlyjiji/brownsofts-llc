@@ -24,12 +24,25 @@
     background-color: #ffffff;
     padding: 4px 12px;
     margin-bottom: 25px;
-    line-height: 0;
-    border-radius: 0;
+    line-height: 1;
+    border-radius: 4px;
+}
+
+.footer-logo .logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #001d3d;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.footer-logo .logo-text::after {
+    content: 'softs';
+    color: #ff5e14;
 }
 
 .footer-logo img {
-    height: 30px;
+    height: 45px;
     width: auto;
 }
 

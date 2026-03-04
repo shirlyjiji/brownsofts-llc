@@ -3,7 +3,6 @@ import './Header.css';
 import { FaChevronDown, FaPaperPlane, FaGlobeAmericas } from 'react-icons/fa';
 import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi';
 import { HiOutlineUserCircle, HiMenu, HiX } from 'react-icons/hi';
-import logo from '../../assets/logo.png';
 
 const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -51,14 +50,14 @@ const Header = () => {
         <div className="main-header-container">
           {/* Logo */}
           <div className="logo-container">
-            <img src={logo} alt="Brownsofts Logo" className="logo-img" />
+            <span className="logo-text">Brownsofts</span>
           </div>
 
           {/* Navigation */}
           <nav className={`main-nav ${isMobileMenuOpen ? 'mobile-active' : ''}`}>
             {isMobileMenuOpen && (
               <div className="mobile-menu-header">
-                <img src={logo} alt="Logo" className="logo-img" />
+                <span className="logo-text">Brownsofts</span>
                 <button className="close-menu" onClick={toggleMobileMenu}><HiX /></button>
               </div>
             )}

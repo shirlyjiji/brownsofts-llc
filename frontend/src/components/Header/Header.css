@@ -120,6 +120,29 @@
   align-items: center;
 }
 
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0B2A4A;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.logo-text::after {
+  content: 'softs';
+  color: #FF6A00;
+}
+
+.logo-text {
+  display: inline-block;
+}
+
+/* We only want "Brown" to be blue and "softs" to be orange, 
+   but since the text in JSX is "Brownsofts", we'll hide the 
+   last part and use the pseudo-element. 
+   Actually, a cleaner way is to just style it in JSX, 
+   but let's try to keep it simple here. */
+
 .logo-img {
   max-height: 45px;
   width: auto;

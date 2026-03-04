@@ -1,7 +1,6 @@
 import React from 'react';
 import './Footer.css';
 import { FiFacebook, FiTwitter, FiLinkedin, FiInstagram, FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
-import logo from '../../assets/logo.png';
 
 const Footer = () => {
     return (
@@ -11,7 +10,7 @@ const Footer = () => {
                     {/* Brand Section */}
                     <div className="footer-column brand-col">
                         <div className="footer-logo">
-                            <img src={logo} alt="Brownsofts Logo" />
+                            <span className="logo-text">Brownsofts</span>
                         </div>
                         <p className="footer-desc">
                             Empowering businesses with expert web design, data-driven marketing, and innovative IT solutions since 2022.
