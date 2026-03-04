@@ -1,0 +1,107 @@
+.brand-section {
+    background-color: #fff;
+    overflow: hidden;
+    width: 100%;
+}
+
+.collaboration-header .sub-title {
+    color: #ff5e14;
+    /* Brand Orange */
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.collaboration-header .sub-title::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35px;
+    height: 3px;
+    background-color: #ff5e14;
+}
+
+.collaboration-header .main-title {
+    font-weight: 800;
+    font-size: 2.8rem;
+    color: #001d3d;
+    /* Brand Dark Blue */
+    margin-top: 15px;
+}
+
+.brand-slider {
+    margin-top: 60px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 40px 0;
+    /* Professional edge fade */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.brand-track {
+    display: flex;
+    /* 10vw per item * 40 items total (20 original + 20 dup) */
+    width: calc(10vw * 40);
+    animation: scroll 60s linear infinite;
+}
+
+.brand-logo-item {
+    /* Each item takes exactly 10% of the screen width to show 10 per row */
+    width: 10vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Padding provides the "gap" between logos while keeping the 10vw width */
+    padding: 0 1vw;
+    cursor: pointer;
+}
+
+.brand-img {
+    max-width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.brand-logo-item:hover .brand-img {
+    transform: scale(1.2);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        /* Scroll half the track (the 20 unique logos) */
+        transform: translateX(calc(-10vw * 20));
+    }
+}
+
+.brand-slider:hover .brand-track {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustment: Show 5 logos on mobile instead of 10 */
+@media (max-width: 768px) {
+    .brand-track {
+        width: calc(20vw * 40);
+    }
+
+    .brand-logo-item {
+        width: 20vw;
+    }
+
+    @keyframes scroll {
+        100% {
+            transform: translateX(calc(-20vw * 20));
+        }
+    }
+}

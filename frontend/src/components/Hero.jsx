@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 // 1. Add Bootstrap imports
-import { Container, Row, Col } from 'react-bootstrap'; 
+import { Container, Row, Col } from 'react-bootstrap';
 // 2. Add Lucide icon imports for the categories section
 import { Globe, PlayCircle, Palette, Zap, Layers } from 'lucide-react';
 import {
@@ -13,7 +13,8 @@ import { BsArrowRight, BsSearch } from 'react-icons/bs';
 
 // Note: Replace with your actual image paths
 import teamImage from '../assets/team-precision.png';
-
+import HomeServices from './Homeservices';
+import BrandCollaboration from './BrandCollaboration';
 const Hero = () => {
     return (
         <div>
@@ -132,6 +133,8 @@ const Hero = () => {
                     </Row>
                 </Container>
             </section>
+            
+            <BrandCollaboration/>
         </div>
     );
 };

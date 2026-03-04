@@ -1,0 +1,98 @@
+.featured-services {
+    background-color: #ffffff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.section-title {
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.section-title .highlight {
+    color: #eb690c;
+    /* Matches your brand orange */
+}
+
+/* Tab Buttons Styling */
+.services-tabs .tab-btn {
+    border: 1px solid #e0e0e0;
+    background: white;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #666;
+    transition: 0.3s all ease;
+}
+
+.services-tabs .tab-btn.active {
+    background-color: #eb690c;
+    color: white;
+    border-color: #eb690c;
+    box-shadow: 0 4px 15px rgba(235, 105, 12, 0.3);
+}
+
+/* Card Styling */
+.service-card {
+    border-radius: 15px;
+    overflow: hidden;
+    background: white;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-wrapper {
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #8B5E3C;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.service-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.price-tag .from-text {
+    font-size: 0.85rem;
+    color: #999;
+    margin-right: 5px;
+}
+
+.price-tag .price-val {
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: #eb690c;
+}
+
+.get-started-btn {
+    background-color: #2D241E;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.get-started-btn:hover {
+    background-color: #eb690c;
+}
