@@ -1,0 +1,133 @@
+:root {
+    --logo-width: 200px;
+    --logo-count: 20;
+    --animation-speed: 40s;
+}
+
+.brand-section {
+    background-color: #fff;
+    padding: 80px 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Header Styling */
+.collaboration-header .sub-title {
+    color: #ff5e14;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.collaboration-header .sub-title::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background-color: #ff5e14;
+}
+
+.collaboration-header .main-title {
+    font-weight: 800;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    color: #001d3d;
+    margin: 0;
+}
+
+/* Slider Logic */
+.brand-slider {
+    margin-top: 50px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.brand-track {
+    display: flex;
+    width: calc(var(--logo-width) * var(--logo-count) * 2);
+    animation: scroll var(--animation-speed) linear infinite;
+}
+
+.brand-logo-item {
+    width: var(--logo-width);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+}
+
+/* REMOVED GRAYSCALE AND OPACITY OVERLAY */
+.brand-img {
+    width: 100%;
+    height: auto;
+    max-height: 75px;
+    /* Slightly increased for better visibility */
+    object-fit: contain;
+    transition: transform 0.4s ease;
+    /* Only keeping transform for hover */
+}
+
+.brand-logo-item:hover .brand-img {
+    transform: scale(1.1);
+}
+
+/* Pause on hover */
+.brand-slider:hover .brand-track {
+    animation-play-state: paused;
+}
+
+/* INFINITE SCROLL ANIMATION */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(var(--logo-width) * var(--logo-count) * -1));
+    }
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+@media (min-width: 1200px) {
+    :root {
+        --logo-width: calc(100vw / 8);
+    }
+}
+
+@media (max-width: 1199px) {
+    :root {
+        --logo-width: calc(100vw / 5);
+        --animation-speed: 30s;
+    }
+
+    .brand-section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --logo-width: calc(100vw / 3);
+        --animation-speed: 25s;
+    }
+
+    .collaboration-header .main-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --logo-width: calc(100vw / 2);
+        --animation-speed: 20s;
+    }
+}

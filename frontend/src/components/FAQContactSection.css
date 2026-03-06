@@ -1,0 +1,113 @@
+/* FAQContactSection Colors */
+.br-faq-contact-section {
+    --br-primary: #ff5e14;
+    --br-secondary: #001d3d;
+    --br-accent: #f4f7fa;
+    --br-text-main: #1f2937;
+    --br-text-muted: #6b7280;
+    --br-white: #fff;
+
+    background-color: var(--br-accent);
+    padding: 100px 0;
+    color: var(--br-text-main);
+}
+
+.br-section-tag {
+    color: var(--br-primary);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.br-section-tag::after {
+    content: '';
+    width: 40px;
+    height: 2px;
+    background: var(--br-primary);
+}
+
+/* Accordion Styling */
+.br-faq-item {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    background-color: var(--br-white);
+}
+
+.br-faq-header {
+    background: var(--br-white);
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--br-text-main);
+    transition: 0.3s;
+}
+
+.br-faq-header.active {
+    background: var(--br-primary) !important;
+    color: var(--br-white) !important;
+}
+
+.br-faq-answer {
+    background-color: #fcfcfc;
+    color: var(--br-text-muted);
+}
+
+/* Form Styling */
+.br-contact-form input.br-input,
+.br-contact-form select.br-select,
+.br-contact-form textarea.br-textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #eee;
+    background: #fcfcfc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    transition: 0.3s;
+    color: var(--br-text-main);
+}
+
+.br-contact-form input.br-input:focus,
+.br-contact-form select.br-select:focus,
+.br-contact-form textarea.br-textarea:focus {
+    border-color: var(--br-primary);
+}
+
+.br-submit-btn {
+    background: var(--br-text-main);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.br-submit-btn:hover {
+    background: var(--br-primary);
+}
+
+/* FAQ Content Animation */
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.faq-content.show {
+    max-height: 250px;
+    /* Adjusted to fit content */
+    opacity: 1;
+}

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
-
 :root {
     --brand-orange: #ff5e14;
     --brand-dark-blue: #001d3d;
@@ -12,14 +10,10 @@
     min-height: 100vh;
     width: 100%;
     background: radial-gradient(circle at 80% 20%, #fff0e6 0%, #ffffff 100%);
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    /* Change overflow-x to hidden to prevent side-scrolling from blobs */
-    /* Remove the general overflow: hidden */
-    overflow-x: hidden;
     display: flex;
     align-items: center;
-    /* Add padding to the bottom so the overlapping stats card doesn't hit the next section */
     padding-bottom: 80px;
+
 }
 
 /* Background Blob */
@@ -28,7 +22,7 @@
     position: absolute;
     width: 65%;
     height: 120%;
-    background: var(--brand-orange);
+    background: var(white);
     top: -10%;
     right: -15%;
     border-radius: 45% 55% 40% 60% / 35% 65% 35% 65%;
@@ -187,6 +181,7 @@
     position: relative;
     width: 550px;
     height: 550px;
+    margin-top: 50px;
 }
 
 .orange-portal-bg {
@@ -212,7 +207,22 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: 1s;
+    transition: opacity 1.2s ease-in-out, transform 1.5s ease-in-out;
+}
+
+/* Base state for the images */
+.image-transition {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: scale(1.1); /* Start slightly larger to zoom 'in' smoothly */
+}
+
+/* Active state for the images */
+.image-active {
+    opacity: 1;
+    transform: scale(1); /* Smoothly settle to normal size */
+    z-index: 2;
 }
 
 /* Orbiting Logos */
@@ -294,12 +304,12 @@
 /* Stats Card - Updated to Horizontal Row */
 .stats-card {
     position: absolute;
-    bottom: -40px;
+    bottom: 40px;
     /* Adjusting to overlap the bottom like the screenshot */
     left: 120px;
     background: var(--glass-bg);
     backdrop-filter: blur(12px);
-    padding: 20px 40px;
+    padding: 20px 20px;
     border-radius: 20px;
     z-index: 100;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -335,8 +345,8 @@
 }
 
 .icon-check-bg {
-    background: #2ecc71;
-    color: #ffffff;
+    background: #f9ebe7;
+    color: #e96a03;
 }
 
 .icon-cal-bg {
@@ -453,8 +463,10 @@
     }
 
     .visual-block {
-        transform: scale(0.7);
-        margin-top: -50px;
+        /* Changed from 0.7 to 0.9 or 1 to prevent it from looking tiny */
+        transform: scale(1.2);
+        margin-bottom: 20px;
+        
     }
 
     .stats-card {
@@ -550,7 +562,7 @@
         left: 0;
         margin: 60px auto 0;
         width: 90%;
-        max-width: 500px;
+        max-width: 630px;
         flex-direction: row;
         /* Keep it as a row on tablets */
         justify-content: space-around;
@@ -559,7 +571,7 @@
 }
 
 /* For Mobile Phones */
-@media (max-width: 576px) {
+@media (max-width: 700px) {
     .main-title {
         font-size: 2.8rem;
         /* Fit title on small screens */

@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+    --brand-orange: #ff5e14;
+    --brand-dark-blue: #001d3d;
+    --brand-text-blue: #1f2937;
+    --glass-bg: #ffffff;
+    --white: #ffffff;
+}
+
+.header-wrapper {
+
+    width: 100%;
+    /* Change from relative to fixed */
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Top Bar --- */
+.top-bar {
+    background-color: var(--brand-dark-blue);
+    color: var(--white);
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8px 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.top-bar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.follow-us {
+    font-weight: 800;
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--white);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
+}
+
+.social-links a:hover {
+    color: var(--brand-orange);
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+.top-bar-center {
+    color: #e0e0e0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.divider {
+    margin: 0 4px;
+}
+
+.contact-link {
+    color: var(--white);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+}
+
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lang-dropdown,
+.global-dropdown {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+/* --- Main Header --- */
+.main-header {
+    background-color: #ffffff;
+    color: var(--brand-text-blue);
+    z-index: 2001;
+    position: relative;
+
+}
+
+/* Add a spacer to your App.js or Main layout so content doesn't hide under the fixed header */
+.content-top-offset {
+    margin-top: 120px;
+    /* Adjust based on your header's total height */
+}
+
+.main-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    max-height: 45px;
+    width: auto;
+}
+
+/* Navigation */
+.main-nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--brand-text-blue);
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover {
+    color: var(--brand-orange);
+}
+
+.nav-arrow {
+    font-size: 0.6rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+/* Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--brand-text-blue);
+    transition: color 0.2s;
+}
+
+.login-btn:hover {
+    color: var(--brand-orange);
+}
+
+.cta-button {
+    background-color: var(--brand-dark-blue);
+    color: var(--white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.cta-button:hover {
+    background-color: var(--brand-orange);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 94, 20, 0.3);
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--brand-dark-blue);
+    cursor: pointer;
+}
+
+/* --- Dropdown Menu (Desktop) --- */
+.services-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+    width: 900px;
+    /* Adjust based on preference */
+    padding: 40px;
+    border-radius: 30px;
+    /* Extra rounded as per image */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+    margin-top: 25px;
+    border: 1px solid #f1f1f1;
+    animation: fadeInSlide 0.1s ease-out;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+.dropdown-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #1a1a1a;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns as per your image */
+    gap: 20px;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1.5px solid #f5f5f5;
+    /* Light border */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    border-color: var(--brand-orange);
+    background-color: #fffaf8;
+    transform: translateY(-3px);
+}
+
+.item-img-container {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+}
+
+.item-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    /* Matching the image's inner radius */
+}
+
+.item-content h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--brand-text-blue);
+    margin: 0 0 4px 0;
+}
+
+.item-content p {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Ensure the parent nav item is relative so the menu positions correctly */
+.nav-item-dropdown {
+    position: relative;
+    /* Creates a hover bridge */
+}
+
+/* =====================================================
+   LARGE DESKTOP (1400px and above)
+===================================================== */
+@media (min-width: 1400px) {
+
+    .top-bar-container,
+    .main-header-container {
+        max-width: 1350px;
+    }
+
+    .services-dropdown {
+        width: 1000px;
+    }
+}
+
+
+/* =====================================================
+   DESKTOP / LAPTOP (1024px – 1399px)
+===================================================== */
+@media (max-width: 1399px) {
+
+    .top-bar-container,
+    .main-header-container {
+        max-width: 1100px;
+    }
+
+    .main-nav {
+        gap: 25px;
+    }
+
+    .services-dropdown {
+        width: 850px;
+    }
+
+    .dropdown-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* =====================================================
+   TABLET (768px – 1023px)
+===================================================== */
+@media (max-width: 1023px) {
+
+    .top-bar-center {
+        display: none;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 320px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        gap: 20px;
+        transition: right 0.35s ease;
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.08);
+        z-index: 3000;
+
+        /* ADD THESE TWO LINES */
+        overflow-y: auto;
+        padding-bottom: 100px;
+    }
+
+    .main-nav.mobile-active {
+        right: 0;
+    }
+
+    .main-nav a {
+        font-size: 1rem;
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .services-dropdown {
+        position: static;
+        transform: none;
+        width: 100%;
+        padding: 20px;
+        margin-top: 10px;
+        border-radius: 15px;
+        box-shadow: none;
+    }
+
+    .dropdown-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .dropdown-item {
+        padding: 12px;
+    }
+
+    .mobile-menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .mobile-menu-footer {
+        margin-top: auto;
+        width: 100%;
+    }
+
+    .mobile-menu-footer .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE (480px – 767px)
+===================================================== */
+@media (max-width: 767px) {
+
+    .top-bar {
+        font-size: 0.75rem;
+    }
+
+    .top-bar-container {
+        padding: 6px 12px;
+    }
+
+    .follow-us {
+        display: none;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .top-bar-right {
+        gap: 10px;
+    }
+
+    .main-header-container {
+        padding: 10px 15px;
+    }
+
+    .logo-img {
+        max-height: 38px;
+    }
+
+    .main-nav {
+        width: 280px;
+        padding: 25px;
+    }
+
+    .cta-button {
+        padding: 10px 18px;
+        font-size: 0.8rem;
+    }
+
+    .item-img-container {
+        width: 55px;
+        height: 55px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE (Below 480px)
+===================================================== */
+@media (max-width: 480px) {
+
+    .top-bar-left {
+        gap: 8px;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
+    }
+
+    .logo-img {
+        max-height: 34px;
+    }
+
+    .main-nav {
+        width: 240px;
+    }
+
+    .dropdown-item {
+        gap: 10px;
+    }
+
+    .item-content h4 {
+        font-size: 14px;
+    }
+
+    .item-content p {
+        font-size: 11px;
+    }
+
+}
+
+/* --- Mobile Menu Close Button --- */
+.close-menu {
+    background: #f8f9fa;
+    /* Light background to make it stand out */
+    border: none;
+    color: var(--brand-dark-blue);
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.close-menu:hover {
+    background-color: var(--brand-orange);
+    color: var(--white);
+    transform: rotate(90deg);
+    /* Nice visual touch when hovering */
+}
+
+/* Ensure the header container for mobile looks clean */
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Optional: Make the close icon itself slightly bolder */
+.close-menu svg {
+    stroke-width: 1;
+}

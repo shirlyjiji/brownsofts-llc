@@ -1,0 +1,72 @@
+/* ============================= */
+/* KINETIC TOP CATEGORIES STYLE */
+/* ============================= */
+
+.br-kinetic-section h2 {
+    color: var(--brand-dark-blue);
+}
+
+.category-title {
+    color: var(--brand-text-blue);
+    font-weight: 700;
+}
+
+.br-orbit-wrapper {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.br-main-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.4s ease;
+    z-index: 2;
+}
+
+.br-orbit-border {
+    position: absolute;
+    width: 95px;
+    height: 95px;
+    border: 1px dashed var(--brand-orange);
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.br-category-card:hover .br-orbit-border {
+    opacity: 1;
+    transform: rotate(180deg);
+}
+
+.br-category-card:hover .br-main-circle {
+    transform: scale(0.85);
+}
+
+/* Header Line */
+.br-header-line {
+    flex-grow: 1;
+    height: 1px;
+    background: #e0e0e0;
+    position: relative;
+}
+
+.br-header-line::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -2px;
+    width: 5px;
+    height: 5px;
+    background: var(--brand-orange);
+    border-radius: 50%;
+}

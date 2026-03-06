@@ -1,0 +1,207 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+.footer {
+    background-color: var(--brand-dark-blue);
+    /* New dark blue background */
+    color: #ffffff;
+    padding: 80px 0 0;
+    
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr;
+    gap: 60px;
+    padding-bottom: 80px;
+}
+
+/* Brand Column */
+.footer-logo {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 4px 12px;
+    margin-bottom: 25px;
+    line-height: 0;
+    border-radius: 0;
+}
+
+.footer-logo img {
+    height: 45px;
+    width: auto;
+}
+
+.footer-desc {
+    color: #e0e0e0;
+    /* Lighter grey for better contrast on blue */
+    font-size: 1.05rem;
+    line-height: 1.5;
+    margin-bottom: 35px;
+    max-width: 350px;
+    font-weight: 400;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Subtle white overlay for blue background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #ff5e14;
+    /* New orange accent */
+    transform: translateY(-3px);
+}
+
+/* Footer Headings */
+.footer-title {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 30px;
+    height: 2px;
+    background-color: #ff5e14;
+    /* New orange accent */
+}
+
+/* Links List */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ff5e14;
+    /* New orange accent */
+}
+
+/* Contact Column */
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+.contact-icon {
+    color: #ff5e14;
+    /* New orange accent */
+    font-size: 1.1rem;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+    background-color: #00152b;
+    /* Slightly darker than #001d3d */
+    padding: 25px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-legal a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.footer-legal a:hover {
+    color: #ff5e14;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .footer-bottom-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-legal {
+        justify-content: center;
+    }
+}
