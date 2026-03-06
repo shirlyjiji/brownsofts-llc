@@ -58,7 +58,7 @@ const HomeServices = () => {
 
                 {/* Services Grid */}
                 <div className="services-grid">
-                    <AnimatePresence mode="wait">
+                    <AnimatePresence mode="popLayout">
                         {filteredServices.map((service, index) => (
                             <motion.div
                                 key={`${service.id}-${activeCategory}`}

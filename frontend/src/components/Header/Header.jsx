@@ -68,6 +68,7 @@ const Header = () => {
 
                     {/* Navigation */}
                     <nav className={`main-nav ${isMobileMenuOpen ? 'mobile-active' : ''}`}>
+                        
                         {isMobileMenuOpen && (
                             <div className="mobile-menu-header">
                                 <img src={logo} alt="Logo" className="logo-img" />
