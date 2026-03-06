@@ -65,18 +65,56 @@ const FAQContactSection = () => {
                         <h2 className="display-6 fw-bold mb-5">Make An Free IT Consultant</h2>
                         <form className="br-contact-form" onSubmit={(e) => e.preventDefault()}>
                             <Row className="g-3">
-                                <Col md={6}><input type="text" placeholder="Your Name*" required className="br-input" /></Col>
-                                <Col md={6}><input type="email" placeholder="Mail*" required className="br-input" /></Col>
-                                <Col md={6}><input type="text" placeholder="Your Phone" className="br-input" /></Col>
                                 <Col md={6}>
-                                    <select className="br-select">
-                                        <option>Select Service</option>
-                                        <option>Web Design</option>
-                                        <option>IT Consulting</option>
-                                        <option>Digital Marketing</option>
+                                    <input
+                                        type="text"
+                                        name="user_name"  // Added name
+                                        id="user_name"    // Added id
+                                        placeholder="Your Name*"
+                                        required
+                                        className="br-input"
+                                    />
+                                </Col>
+                                <Col md={6}>
+                                    <input
+                                        type="email"
+                                        name="user_email" // Added name
+                                        id="user_email"   // Added id
+                                        placeholder="Mail*"
+                                        required
+                                        className="br-input"
+                                    />
+                                </Col>
+                                <Col md={6}>
+                                    <input
+                                        type="text"
+                                        name="user_phone" // Added name
+                                        id="user_phone"   // Added id
+                                        placeholder="Your Phone"
+                                        className="br-input"
+                                    />
+                                </Col>
+                                <Col md={6}>
+                                    <select
+                                        name="service_type" // Added name
+                                        id="service_type"   // Added id
+                                        className="br-select"
+                                    >
+                                        <option value="">Select Service</option>
+                                        <option value="web-design">Web Design</option>
+                                        <option value="it-consulting">IT Consulting</option>
+                                        <option value="digital-marketing">Digital Marketing</option>
                                     </select>
                                 </Col>
-                                <Col xs={12}><textarea rows="4" placeholder="Your Message*" className="br-textarea"></textarea></Col>
+                                <Col xs={12}>
+                                    <textarea
+                                        name="message"      // Added name
+                                        id="message"        // Added id
+                                        rows="4"
+                                        placeholder="Your Message*"
+                                        className="br-textarea"
+                                    ></textarea>
+                                </Col>
                             </Row>
                             <button type="submit" className="br-submit-btn">
                                 Submit Now <ArrowRight size={18} />

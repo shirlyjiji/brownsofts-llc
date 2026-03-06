@@ -70,7 +70,7 @@ const Services = () => {
         return matchesCategory && matchesSearch && matchesPrice && matchesRating && matchesSkill && matchesDelivery;
     });
 
-    
+
 
     const sortedServices = [...filteredServices].sort((a, b) => {
         if (sortBy === 'Price: Low to High') return a.price - b.price;
@@ -92,7 +92,7 @@ const Services = () => {
 
     return (
         <div className="services-page">
-            
+
 
             <div className="services-container mt-5">
                 <div className="services-page-layout">
@@ -125,6 +125,8 @@ const Services = () => {
                             <h4 className="sidebar-heading">Skills</h4>
                             <select
                                 className="sidebar-dropdown"
+                                id="skill-filter"    // Added ID
+                                name="skill"         // Added Name
                                 value={selectedSkill}
                                 onChange={(e) => setSelectedSkill(e.target.value)}
                             >
@@ -141,6 +143,8 @@ const Services = () => {
                             <h4 className="sidebar-heading">Delivery Time</h4>
                             <select
                                 className="sidebar-dropdown"
+                                id="delivery-filter" // Added ID
+                                name="delivery_time"
                                 value={selectedDeliveryTime}
                                 onChange={(e) => setSelectedDeliveryTime(e.target.value)}
                             >
