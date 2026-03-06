@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import ctaBg from "../assets/bg.jpg";
-import "./CTA.css";
+import "./cta.css";
 
 const CTA = () => {
     return (

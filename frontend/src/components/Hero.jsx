@@ -5,7 +5,7 @@ import { BsArrowRight } from 'react-icons/bs';
 import { Container, Row, Col } from 'react-bootstrap';
 // 2. Add Lucide icon imports for the categories section
 import { Globe, PlayCircle, Palette, Zap, Layers } from 'lucide-react';
-import './kineticSection.css';
+import './KineticSection.css';
 import BrandCollaboration from './BrandCollaboration';
 import HomeServices from './Homeservices';
 import WhyChooseUs from './WhyChooseUs';
