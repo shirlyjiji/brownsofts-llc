@@ -1,0 +1,39 @@
+{
+    "header": {
+        "follow_us": "Síguenos:",
+        "topbar_message": "Soluciones de diseño moderno para el crecimiento",
+        "contact_us": "Contáctenos",
+        "home": "Inicio",
+        "about": "Nosotros",
+        "services": "Servicios",
+        "blog": "Blog",
+        "lets_talk": "HABLEMOS",
+        "login": "Iniciar sesión",
+        "popular_categories": "CATEGORÍAS POPULARES",
+        "items_available": "Artículos disponibles"
+    },
+    "hero": {
+        "get_started": "Empezar",
+        "contact_us": "Contáctenos",
+        "happy_clients": "Clientes Felices",
+        "completed_projects": "Proyectos Completados",
+        "years_of_service": "Años de Servicio",
+        "slides": [
+            {
+                "meta": "OFRECEMOS EXTERNALIZACIÓN",
+                "title": "Diseño Creativo",
+                "desc": "Impulsando el éxito global en el mundo digital. Ofrecemos servicios innovadores de diseño web y gráfico que ayudan a las empresas a escalar con precisión milimétrica."
+            },
+            {
+                "meta": "DESARROLLO EXPERTO",
+                "title": "Soluciones Web",
+                "desc": "Servicios tecnológicos con visión de futuro. Creamos sitios web y aplicaciones robustos y escalables utilizando marcos modernos para aumentar su presencia global."
+            },
+            {
+                "meta": "MARKETING DIGITAL",
+                "title": "Estrategia Global",
+                "desc": "Ayudamos a las empresas a crecer mediante SEO basado en datos y producción de video de alta gama. Llegue a su audiencia con contenido que realmente resuene."
+            }
+        ]
+    }
+}

@@ -7,12 +7,16 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Globe, PlayCircle, Palette, Zap, Layers } from 'lucide-react';
 import './KineticSection.css';
 import BrandCollaboration from './BrandCollaboration';
+import AboutUs from './AboutUs';
 import HomeServices from './Homeservices';
+import Process from './Process';
 import WhyChooseUs from './WhyChooseUs';
 import Testimonials from './Testimonials';
+import OurTeam from './OurTeam';
 import Blog from './Blog';
 import FAQContactSection from './FAQContactSection';
 import CTA from './cta';
+import { useTranslation } from 'react-i18next';
 
 
 // Assets
@@ -29,25 +33,26 @@ import seoLogo from '../assets/hero-brand/seo.jpg';
 
 
 const Hero = () => {
+    const { t } = useTranslation();
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const slides = [
         {
-            meta: "WE PROVIDE OUTSOURCED",
-            title: "Creative Design",
-            desc: "Sparking Global Success in the Digital World. We deliver innovative web and graphic design services that help businesses scale through pixel-perfect precision.",
+            meta: t('hero.slides.0.meta'),
+            title: t('hero.slides.0.title'),
+            desc: t('hero.slides.0.desc'),
             focusLogo: psLogo,
         },
         {
-            meta: "EXPERT DEVELOPMENT",
-            title: "Web Solutions",
-            desc: "Forward-thinking technology services. We build robust, scalable websites and applications using modern frameworks to grow your global presence.",
+            meta: t('hero.slides.1.meta'),
+            title: t('hero.slides.1.title'),
+            desc: t('hero.slides.1.desc'),
             focusLogo: htmlLogo,
         },
         {
-            meta: "DIGITAL MARKETING",
-            title: "Global Strategy",
-            desc: "Helping businesses grow through data-driven SEO and high-end video production. Reach your audience with content that truly resonates.",
+            meta: t('hero.slides.2.meta'),
+            title: t('hero.slides.2.title'),
+            desc: t('hero.slides.2.desc'),
             focusLogo: seoLogo,
         }
     ];
@@ -55,7 +60,7 @@ const Hero = () => {
     // Auto-advance slides every 6 seconds
     useEffect(() => {
         const timer = setInterval(() => {
-            setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+            setCurrentSlide((prev) => (prev === (slides.length - 1) ? 0 : prev + 1));
         }, 6000);
         return () => clearInterval(timer);
     }, [slides.length]);
@@ -98,8 +103,8 @@ const Hero = () => {
                             </p>
 
                             <div className="dual-actions slide-up-delay-3">
-                                <button className="btn-solid">Get Started <BsArrowRight /></button>
-                                <button className="btn-outline">Contact Us <BsArrowRight /></button>
+                                <button className="btn-solid">{t('hero.get_started')} <BsArrowRight /></button>
+                                <button className="btn-outline">{t('hero.contact_us')} <BsArrowRight /></button>
                             </div>
 
                             {/* Slide Indicators */}
@@ -147,7 +152,7 @@ const Hero = () => {
                             <div className="stat-icon-circle icon-user-bg"><FaUser /></div>
                             <div className="stat-texts">
                                 <span className="s-val">2876+</span>
-                                <span className="s-lab">Happy Clients</span>
+                                <span className="s-lab">{t('hero.happy_clients')}</span>
                             </div>
                         </div>
 
@@ -157,7 +162,7 @@ const Hero = () => {
                             <div className="stat-icon-circle icon-check-bg"><FaCheck /></div>
                             <div className="stat-texts">
                                 <span className="s-val">4245+</span>
-                                <span className="s-lab">Completed Projects</span>
+                                <span className="s-lab">{t('hero.completed_projects')}</span>
                             </div>
                         </div>
 
@@ -167,64 +172,20 @@ const Hero = () => {
                             <div className="stat-icon-circle icon-cal-bg"><FaCalendarAlt /></div>
                             <div className="stat-texts">
                                 <span className="s-val">15+</span>
-                                <span className="s-lab">Years of Service</span>
+                                <span className="s-lab">{t('hero.years_of_service')}</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-
-            {/* Brand Collaborations */}
-            <BrandCollaboration />
-
-            {/* Top Categories */}
-
-            <section className="br-kinetic-section py-5 bg-white">
-                <Container>
-                    <div className="br-section-header d-flex align-items-center gap-3 mb-5">
-                        <h2 className="fw-bold m-0">Top Categories</h2>
-                        <div className="br-header-line"></div>
-                        <span className="text-muted small fw-bold text-uppercase">
-                            Industry Leaders
-                        </span>
-                    </div>
-
-                    <Row className="justify-content-center">
-                        {[
-                            { name: "Web Dev", icon: <Globe size={32} />, count: "120+ Projects", color: "#001d3d" },
-                            { name: "Animation", icon: <PlayCircle size={32} />, count: "85+ Projects", color: "#ff5e14" },
-                            { name: "Graphics", icon: <Palette size={32} />, count: "200+ Designs", color: "#001d3d" },
-                            { name: "Marketing", icon: <Zap size={32} />, count: "50+ Campaigns", color: "#ff5e14" },
-                            { name: "UI Apps", icon: <Layers size={32} />, count: "40+ Apps", color: "#001d3d" }
-                        ].map((cat, index) => (
-                            <Col key={index} xs={6} md={4} lg={2} className="mb-4">
-                                <div className="br-category-card text-center">
-                                    <div className="br-orbit-wrapper">
-                                        <div
-                                            className="br-main-circle"
-                                            style={{ backgroundColor: cat.color }}
-                                        >
-                                            {cat.icon}
-                                        </div>
-                                        <div className="br-orbit-border"></div>
-                                    </div>
-
-                                    <h6 className="category-title mt-3 mb-0">
-                                        {cat.name}
-                                    </h6>
-                                    <small className="text-muted">
-                                        {cat.count}
-                                    </small>
-                                </div>
-                            </Col>
-                        ))}
-                    </Row>
-                </Container>
-            </section>
+            <AboutUs />
             <HomeServices />
+            <Process />
             <WhyChooseUs />
+            <BrandCollaboration />
             <Testimonials />
+            <OurTeam />
             <Blog />
             <FAQContactSection/>
             <CTA/>

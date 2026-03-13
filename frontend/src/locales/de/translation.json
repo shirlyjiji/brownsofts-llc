@@ -1,0 +1,39 @@
+{
+    "header": {
+        "follow_us": "Folge uns:",
+        "topbar_message": "Moderne Designlösungen für Wachstum",
+        "contact_us": "Kontaktiere uns",
+        "home": "Startseite",
+        "about": "Über uns",
+        "services": "Dienstleistungen",
+        "blog": "Blog",
+        "lets_talk": "LASS UNS REDEN",
+        "login": "Anmeldung",
+        "popular_categories": "BELIEBTE KATEGORIEN",
+        "items_available": "Artikel verfügbar"
+    },
+    "hero": {
+        "get_started": "Anfangen",
+        "contact_us": "Kontaktiere uns",
+        "happy_clients": "Glückliche Kunden",
+        "completed_projects": "Abgeschlossene Projekte",
+        "years_of_service": "Dienstjahre",
+        "slides": [
+            {
+                "meta": "WIR BIETEN OUTSOURCING",
+                "title": "Kreatives Design",
+                "desc": "Weltweiten Erfolg in der digitalen Welt entfachen. Wir bieten innovative Web- und Grafikdesign-Dienstleistungen, die Unternehmen helfen, durch pixelgenaue Präzision zu skalieren."
+            },
+            {
+                "meta": "EXPERTEN-ENTWICKLUNG",
+                "title": "Web-Lösungen",
+                "desc": "Zukunftsweisende Technologiedienstleistungen. Wir bauen robuste, skalierbare Websites und Anwendungen mit modernen Frameworks, um Ihre globale Präsenz auszubauen."
+            },
+            {
+                "meta": "DIGITALES MARKETING",
+                "title": "Globale Strategie",
+                "desc": "Wir helfen Unternehmen zu wachsen, durch datengesteuerte SEO und High-End-Videoproduktion. Erreichen Sie Ihr Publikum mit Inhalten, die wirklich ankommen."
+            }
+        ]
+    }
+}

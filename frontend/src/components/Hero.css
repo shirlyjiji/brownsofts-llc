@@ -304,7 +304,7 @@
 /* Stats Card - Updated to Horizontal Row */
 .stats-card {
     position: absolute;
-    bottom: 40px;
+    bottom: 80px;
     /* Adjusting to overlap the bottom like the screenshot */
     left: 120px;
     background: var(--glass-bg);

@@ -1,0 +1,39 @@
+{
+    "header": {
+        "follow_us": "Follow Us:",
+        "topbar_message": "Modern Design Solutions for Growth",
+        "contact_us": "Contact us",
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "blog": "Blog",
+        "lets_talk": "LET'S TALK",
+        "login": "Login",
+        "popular_categories": "POPULAR CATEGORIES",
+        "items_available": "Items Available"
+    },
+    "hero": {
+        "get_started": "Get Started",
+        "contact_us": "Contact Us",
+        "happy_clients": "Happy Clients",
+        "completed_projects": "Completed Projects",
+        "years_of_service": "Years of Service",
+        "slides": [
+            {
+                "meta": "WE PROVIDE OUTSOURCED",
+                "title": "Creative Design",
+                "desc": "Sparking Global Success in the Digital World. We deliver innovative web and graphic design services that help businesses scale through pixel-perfect precision."
+            },
+            {
+                "meta": "EXPERT DEVELOPMENT",
+                "title": "Web Solutions",
+                "desc": "Forward-thinking technology services. We build robust, scalable websites and applications using modern frameworks to grow your global presence."
+            },
+            {
+                "meta": "DIGITAL MARKETING",
+                "title": "Global Strategy",
+                "desc": "Helping businesses grow through data-driven SEO and high-end video production. Reach your audience with content that truly resonates."
+            }
+        ]
+    }
+}

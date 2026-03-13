@@ -29,6 +29,11 @@ const BrandCollaboration = () => {
         { id: 18, name: "Brand 18", logo: B6 },
         { id: 19, name: "Brand 19", logo: B1 },
         { id: 20, name: "Brand 20", logo: B2 },
+        { id: 21, name: "Brand 21", logo: B3 },
+        { id: 22, name: "Brand 22", logo: B4 },
+        { id: 23, name: "Brand 23", logo: B5 },
+        { id: 24, name: "Brand 24", logo: B6 },
+        
     ];
 
     return (
@@ -40,25 +45,14 @@ const BrandCollaboration = () => {
                 </div>
             </div>
 
-            <div className="brand-slider">
-                <div className="brand-track">
-                    {/* First set of logos */}
-                    {brands.map((brand) => (
-                        <div className="brand-logo-item" key={`orig-${brand.id}`}>
-                            <div className="logo-inner">
-                                <img src={brand.logo} alt={brand.name} className="brand-img" />
-                            </div>
+            <div className="brand-grid">
+                {brands.map((brand) => (
+                    <div className="brand-item" key={brand.id}>
+                        <div className="brand-logo-wrapper">
+                            <img src={brand.logo} alt={brand.name} className="brand-img" />
                         </div>
-                    ))}
-                    {/* Duplicate set for seamless infinite loop */}
-                    {brands.map((brand) => (
-                        <div className="brand-logo-item" key={`dup-${brand.id}`}>
-                            <div className="logo-inner">
-                                <img src={brand.logo} alt={brand.name} className="brand-img" />
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         </section>
     );
