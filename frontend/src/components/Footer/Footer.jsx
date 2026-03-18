@@ -3,8 +3,11 @@ import './Footer.css';
 import { FiFacebook, FiTwitter, FiLinkedin, FiInstagram, FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+    const { t } = useTranslation();
+    
     return (
         <footer className="footer">
             <div className="footer-container">
@@ -17,7 +20,7 @@ const Footer = () => {
                             </Link>
                         </div>
                         <p className="footer-desc">
-                            Empowering businesses with expert web design, data-driven marketing, and innovative IT solutions since 2022.
+                            {t('footer.desc')}
                         </p>
                         <div className="footer-socials">
                             <a href="https://www.facebook.com/brownsofts" className="social-icon"><FiFacebook /></a>
@@ -29,31 +32,31 @@ const Footer = () => {
 
                     {/* Quick Links Section */}
                     <div className="footer-column">
-                        <h3 className="footer-title">Quick Links</h3>
+                        <h3 className="footer-title">{t('footer.quick_links')}</h3>
                         <ul className="footer-links">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Our Services</a></li>
-                            <li><a href="#">Portfolio</a></li>
-                            <li><a href="#">Latest News</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#about">{t('footer.about_us')}</a></li>
+                            <li><a href="/services">{t('footer.our_services')}</a></li>
+                            <li><a href="#">{t('footer.portfolio')}</a></li>
+                            <li><a href="#">{t('footer.latest_news')}</a></li>
+                            <li><a href="#">{t('footer.contact')}</a></li>
                         </ul>
                     </div>
 
                     {/* IT Services Section */}
                     <div className="footer-column">
-                        <h3 className="footer-title">IT Services</h3>
+                        <h3 className="footer-title">{t('footer.it_services')}</h3>
                         <ul className="footer-links">
-                            <li><a href="#">Web Design & Dev</a></li>
-                            <li><a href="#">Digital Marketing</a></li>
-                            <li><a href="#">Video Animation</a></li>
-                            <li><a href="#">SEO Optimization</a></li>
-                            <li><a href="#">Admin Support</a></li>
+                            <li><a href="#">{t('footer.web_design_dev')}</a></li>
+                            <li><a href="#">{t('footer.digital_marketing')}</a></li>
+                            <li><a href="#">{t('footer.video_animation')}</a></li>
+                            <li><a href="#">{t('footer.seo_optimization')}</a></li>
+                            <li><a href="#">{t('footer.admin_support')}</a></li>
                         </ul>
                     </div>
 
                     {/* Get In Touch Section */}
                     <div className="footer-column contact-col">
-                        <h3 className="footer-title">Get In Touch</h3>
+                        <h3 className="footer-title">{t('footer.get_in_touch')}</h3>
                         <ul className="footer-contact">
                             <li>
                                 <FiMapPin className="contact-icon" />
@@ -75,10 +78,10 @@ const Footer = () => {
             {/* Footer Bottom */}
             <div className="footer-bottom">
                 <div className="footer-bottom-container">
-                    <p className="copyright">© 2026 Brownsofts. All Rights Reserved.</p>
+                    <p className="copyright">{t('footer.copyright')}</p>
                     <div className="footer-legal">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms & Conditions</a>
+                        <a href="#">{t('footer.privacy_policy')}</a>
+                        <a href="#">{t('footer.terms_conditions')}</a>
                     </div>
                 </div>
             </div>

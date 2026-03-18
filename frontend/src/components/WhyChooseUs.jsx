@@ -1,40 +1,43 @@
 import React from 'react';
 import { Cpu, Globe, Users, ShieldCheck, Zap, HeartHandshake } from 'lucide-react';
 import './WhyChooseUs.css';
+import { useTranslation } from 'react-i18next';
 
 const WhyChooseUs = () => {
+    const { t } = useTranslation();
+
     const leftFeatures = [
         {
-            title: 'Expert Technology',
-            description: 'Your dedicated technology partner for modern digital solutions.',
+            title: t('why_choose.f1_title'),
+            description: t('why_choose.f1_desc'),
             icon: <Cpu size={32} />
         },
         {
-            title: 'Global Reach',
-            description: 'Sparking success through digital innovation on a global scale.',
+            title: t('why_choose.f2_title'),
+            description: t('why_choose.f2_desc'),
             icon: <Globe size={32} />
         },
         {
-            title: 'Client Centric',
-            description: 'We prioritize your business needs with tailored strategies.',
+            title: t('why_choose.f3_title'),
+            description: t('why_choose.f3_desc'),
             icon: <Users size={32} />
         }
     ];
 
     const rightFeatures = [
         {
-            title: 'Secured Services',
-            description: 'Reliable and safe administrative and technical management.',
+            title: t('why_choose.f4_title'),
+            description: t('why_choose.f4_desc'),
             icon: <ShieldCheck size={32} />
         },
         {
-            title: 'Quick Solutions',
-            description: 'Fast and efficient delivery of high-quality digital assets.',
+            title: t('why_choose.f5_title'),
+            description: t('why_choose.f5_desc'),
             icon: <Zap size={32} />
         },
         {
-            title: '24/7 Support',
-            description: 'Dedicated assistance to keep your operations running smoothly.',
+            title: t('why_choose.f6_title'),
+            description: t('why_choose.f6_desc'),
             icon: <HeartHandshake size={32} />
         }
     ];
@@ -44,9 +47,9 @@ const WhyChooseUs = () => {
             <div className="container">
                 <div className="section-header">
                     <div className="subtitle-wrapper">
-                        <span className="subtitle">Why Choose Brownsofts</span>
+                        <span className="subtitle">{t('why_choose.sub_title')}</span>
                     </div>
-                    <h2 className="main-title">Powering Businesses with Scalable, <br /><span className="text-orange">Secure, and Smart Digital Solutions</span></h2>
+                    <h2 className="main-title" dangerouslySetInnerHTML={{ __html: t('why_choose.main_title') }}></h2>
                 </div>
 
                 <div className="content-layout">

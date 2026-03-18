@@ -8,7 +8,7 @@ import { Globe, PlayCircle, Palette, Zap, Layers } from 'lucide-react';
 import './KineticSection.css';
 import BrandCollaboration from './BrandCollaboration';
 import AboutUs from './AboutUs';
-import HomeServices from './Homeservices';
+import HomeServices from '../components/HomeServices';
 import Process from './Process';
 import WhyChooseUs from './WhyChooseUs';
 import Testimonials from './Testimonials';
@@ -20,7 +20,7 @@ import { useTranslation } from 'react-i18next';
 
 
 // Assets
-import teamImage from '../assets/team-precision.png';
+import teamImage from '../assets/team.png';
 import aeLogo from '../assets/hero-brand/ae.webp';
 import aiLogo from '../assets/hero-brand/ai.webp';
 import drLogo from '../assets/hero-brand/dr.webp';

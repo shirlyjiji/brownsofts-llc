@@ -2,35 +2,36 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Mail, PhoneCall } from "lucide-react";
 import "./cta.css";
+import { useTranslation } from "react-i18next";
 
 const CTA = () => {
+    const { t } = useTranslation();
+
     return (
         <section className="cta-section">
             <div className="cta-bg-glow"></div>
             <div className="cta-grid-pattern"></div>
-            
+
             <div className="container">
                 <div className="cta-wrapper">
-                    <motion.div 
+                    <motion.div
                         className="cta-content-new"
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
                     >
-                        <span className="cta-label">LET'S START SOMETHING</span>
+                        <span className="cta-label">{t('cta.label')}</span>
                         <h2 className="cta-title-new">
-                            Have a Project in Mind? <br />
-                            <span>Let’s Build it Together.</span>
+                            {t('cta.title_part1')} <br />
+                            <span>{t('cta.title_part2')}</span>
                         </h2>
                         <p className="cta-text-new">
-                            Transform your ideas into digital reality. Our team of experts is ready 
-                            to help you scale your business with cutting-edge technology and 
-                            creative solutions.
+                            {t('cta.text')}
                         </p>
                     </motion.div>
 
-                    <motion.div 
+                    <motion.div
                         className="cta-actions-new"
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -38,12 +39,12 @@ const CTA = () => {
                         viewport={{ once: true }}
                     >
                         <div className="cta-card-new">
-                            <h3>Ready to grow?</h3>
-                            <p>Get a free consultation and project estimate today.</p>
+                            <h3>{t('cta.ready_to_grow')}</h3>
+                            <p>{t('cta.get_free_consultation')}</p>
                             <button className="cta-btn-primary">
-                                Get Started Now <ArrowRight size={20} />
+                                {t('cta.get_started_now')} <ArrowRight size={20} />
                             </button>
-                        
+
                         </div>
                     </motion.div>
                 </div>

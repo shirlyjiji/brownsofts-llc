@@ -10,7 +10,8 @@
         "lets_talk": "LET'S TALK",
         "login": "Login",
         "popular_categories": "POPULAR CATEGORIES",
-        "items_available": "Items Available"
+        "items_available": "Items Available",
+        "dropdown_footer": "Browse our curated selection of high-end digital services"
     },
     "hero": {
         "get_started": "Get Started",
@@ -35,5 +36,219 @@
                 "desc": "Helping businesses grow through data-driven SEO and high-end video production. Reach your audience with content that truly resonates."
             }
         ]
+    },
+    "about": {
+        "sub_title": "ABOUT OUR COMPANY",
+        "main_title": "We are more than just a Digital Agency",
+        "description": "At Brownsofts LLC, we blend creativity with technical expertise to help businesses navigate the digital landscape. Our mission is to provide innovative solutions that drive growth and deliver exceptional user experiences.",
+        "feature1": "Strategic Planning & Analysis",
+        "feature2": "Creative Design & User Experience",
+        "feature3": "Scalable Web & Mobile Development",
+        "feature4": "Data-Driven Digital Marketing",
+        "learn_more": "Learn More About Us",
+        "years": "15+",
+        "exp_text": "Years of <br/> Experience"
+    },
+    "services_home": {
+        "premium_solutions": "Premium Solutions",
+        "top_featured": "Top Featured",
+        "services_label": "Services",
+        "from": "From",
+        "get_started": "Get Started",
+        "view_all": "View All Services"
+    },
+    "categories": {
+        "video_animation": "Video & Animation",
+        "web_design": "Web Design",
+        "graphics_design": "Graphics & Design",
+        "seo_marketing": "SEO & Marketing",
+        "admin_support": "Admin Support",
+        "civil_architectural": "Civil & Architectural"
+    },
+    "process": {
+        "sub_title": "WORKING PROCESS",
+        "main_title": "How We Deliver Results",
+        "step1_title": "Discovery",
+        "step1_desc": "We research and analyze your business goals and target audience.",
+        "step2_title": "Strategy & Design",
+        "step2_desc": "Crafting a strategic plan and creating visual concepts that align with your brand.",
+        "step3_title": "Development",
+        "step3_desc": "Our experts build your solution using modern technologies and clean code.",
+        "step4_title": "Launch & Support",
+        "step4_desc": "Final testing, deployment, and ongoing maintenance for sustained success."
+    },
+    "why_choose": {
+        "sub_title": "Why Choose Brownsofts",
+        "main_title": "Powering Businesses with Scalable, <br /><span className='text-orange'>Secure, and Smart Digital Solutions</span>",
+        "f1_title": "Expert Technology",
+        "f1_desc": "Your dedicated technology partner for modern digital solutions.",
+        "f2_title": "Global Reach",
+        "f2_desc": "Sparking success through digital innovation on a global scale.",
+        "f3_title": "Client Centric",
+        "f3_desc": "We prioritize your business needs with tailored strategies.",
+        "f4_title": "Secured Services",
+        "f4_desc": "Reliable and safe administrative and technical management.",
+        "f5_title": "Quick Solutions",
+        "f5_desc": "Fast and efficient delivery of high-quality digital assets.",
+        "f6_title": "24/7 Support",
+        "f6_desc": "Dedicated assistance to keep your operations running smoothly."
+    },
+    "brand_collaboration": {
+        "sub_title": "COLLABORATIONS",
+        "main_title": "Choose by Brand"
+    },
+    "testimonials": {
+        "subtitle": "Testimonials",
+        "title_part1": "What Our Clients Say About ",
+        "title_part2": "Brownsofts",
+        "title_part3": " Services",
+        "items": [
+            {
+                "quote": "Brownsofts transformed our brand's digital presence. Their video editing and web design team delivered beyond our expectations. Professional, creative, and always on time.",
+                "name": "Sarah Mitchell",
+                "role": "Marketing Director",
+                "company": "Luxury Brands Inc."
+            },
+            {
+                "quote": "Outstanding service from start to finish. The 3D architectural renderings they produced for our project helped us secure major investors. Truly world-class talent.",
+                "name": "James Chen",
+                "role": "CEO",
+                "company": "Urban Development Co."
+            },
+            {
+                "quote": "We've partnered with Brownsofts for over two years. Their consistency, creativity, and commitment to excellence make them our go-to for all digital solutions.",
+                "name": "Emily Rodriguez",
+                "role": "Creative Lead",
+                "company": "Studio Nova"
+            }
+        ]
+    },
+    "team": {
+        "sub_title": "MEET OUR EXPERTS",
+        "main_title": "Professional Creative Team",
+        "description": "Our talented team of professionals is dedicated to delivering excellence and innovation in every project we undertake.",
+        "members": [
+            { "name": "John Doe", "role": "CEO & Founder" },
+            { "name": "Jane Smith", "role": "Creative Director" },
+            { "name": "Robert Johnson", "role": "Lead Developer" },
+            { "name": "Emily Brown", "role": "Marketing Manager" }
+        ]
+    },
+    "blog": {
+        "title_part1": "Our ",
+        "title_part2": "Blog",
+        "subtitle": "Insights, tips, and trends from our expert team to help your business grow.",
+        "read_more": "Read More",
+        "posts": [
+            {
+                "title": "Top 10 Video Editing Trends in 2026",
+                "excerpt": "Discover the latest techniques and styles that are dominating the video production industry this year.",
+                "date": "May 15, 2026",
+                "author": "John Doe"
+            },
+            {
+                "title": "How to Build a High-Converting Landing Page",
+                "excerpt": "Learn the essential elements of web design that turn visitors into loyal customers.",
+                "date": "May 10, 2026",
+                "author": "Jane Smith"
+            },
+            {
+                "title": "The Future of SEO: Beyond Keywords",
+                "excerpt": "Explore how AI and user intent are changing the landscape of search engine optimization.",
+                "date": "May 05, 2026",
+                "author": "Mike Ross"
+            }
+        ]
+    },
+    "faq": {
+        "sub_title": "FAQs",
+        "main_title": "Frequently Asked Question",
+        "questions": [
+            {
+                "question": "Do I need coding knowledge to manage my website?",
+                "answer": "No! Our CMS platforms are designed for ease of use. With intuitive drag-and-drop interfaces, you can manage your content without any tech background."
+            },
+            {
+                "question": "What is included in your web design packages?",
+                "answer": "Our packages include a free domain, secure SSL certificate, free hosting, and 30 days of free updates to ensure your site stays current."
+            },
+            {
+                "question": "How does your digital marketing drive results?",
+                "answer": "We use a results-driven approach combining data-driven campaigns, SEO optimization, and social media strategies to increase brand awareness."
+            },
+            {
+                "question": "Do you provide ongoing technical support?",
+                "answer": "Yes, we offer 24/7 email and chat support. Our team is committed to unmatched client satisfaction and long-term partnerships."
+            },
+            {
+                "question": "Can you help with e-commerce maintenance?",
+                "answer": "Absolutely. We handle software updates, security monitoring, plugin installations, and performance optimization for flawlessly functioning online stores."
+            }
+        ]
+    },
+    "contact": {
+        "sub_title": "Get In Touch",
+        "main_title": "Make An Free IT Consultant",
+        "name_placeholder": "Your Name*",
+        "email_placeholder": "Mail*",
+        "phone_placeholder": "Your Phone",
+        "select_service": "Select Service",
+        "message_placeholder": "Your Message*",
+        "submit": "Submit Now"
+    },
+    "cta": {
+        "label": "LET'S START SOMETHING",
+        "title_part1": "Have a Project in Mind?",
+        "title_part2": "Let’s Build it Together.",
+        "text": "Transform your ideas into digital reality. Our team of experts is ready to help you scale your business with cutting-edge technology and creative solutions.",
+        "ready_to_grow": "Ready to grow?",
+        "get_free_consultation": "Get a free consultation and project estimate today.",
+        "get_started_now": "Get Started Now"
+    },
+    "services_page": {
+        "sidebar_categories": "Categories",
+        "category_all": "All",
+        "sidebar_skills": "Skills",
+        "all_skills": "All Skills",
+        "sidebar_delivery": "Delivery Time",
+        "anytime": "Anytime",
+        "up_to_24h": "Up to 24 hours",
+        "up_to_3d": "Up to 3 days",
+        "up_to_7d": "Up to 7 days",
+        "max_price": "Max Price",
+        "sidebar_rating": "Rating",
+        "all_ratings": "All Ratings",
+        "stars_up": "Stars & Up",
+        "reset_filters": "Reset Filters",
+        "purchase": "Purchase",
+        "sort_by": "Sort By",
+        "price_low_high": "Price: Low to High",
+        "price_high_low": "Price: High to Low",
+        "rating_high_low": "Rating: High to Low",
+        "skills_list": {
+            "video_editing": "Video Editing",
+            "logo_design": "Logo Design",
+            "react_dev": "React Development",
+            "seo_opt": "SEO Optimization"
+        }
+    },
+    "footer": {
+        "desc": "Empowering businesses with expert web design, data-driven marketing, and innovative IT solutions since 2022.",
+        "quick_links": "Quick Links",
+        "about_us": "About Us",
+        "our_services": "Our Services",
+        "portfolio": "Portfolio",
+        "latest_news": "Latest News",
+        "contact": "Contact",
+        "it_services": "IT Services",
+        "web_design_dev": "Web Design & Dev",
+        "digital_marketing": "Digital Marketing",
+        "video_animation": "Video Animation",
+        "seo_optimization": "SEO Optimization",
+        "admin_support": "Admin Support",
+        "get_in_touch": "Get In Touch",
+        "copyright": "© 2026 Brownsofts. All Rights Reserved.",
+        "privacy_policy": "Privacy Policy",
+        "terms_conditions": "Terms & Conditions"
     }
 }

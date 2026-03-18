@@ -10,7 +10,8 @@
         "lets_talk": "PARLONS-EN",
         "login": "Connexion",
         "popular_categories": "CATÉGORIES POPULAIRES",
-        "items_available": "Articles disponibles"
+        "items_available": "Articles disponibles",
+        "dropdown_footer": "Explorez notre sélection rigoureuse de services numériques haut de gamme"
     },
     "hero": {
         "get_started": "Commencer",
@@ -35,5 +36,219 @@
                 "desc": "Aider les entreprises à croître grâce au SEO basé sur les données et à la production vidéo haut de gamme. Atteignez votre public avec un contenu qui résonne vraiment."
             }
         ]
+    },
+    "about": {
+        "sub_title": "À PROPOS DE NOTRE ENTREPRISE",
+        "main_title": "Nous sommes plus qu'une simple agence numérique",
+        "description": "Chez Brownsofts LLC, nous mélangeons la créativité avec l'expertise technique pour aider les entreprises à naviguer dans le paysage numérique. Notre mission est de fournir des solutions innovantes qui stimulent la croissance et offrent des expériences utilisateur exceptionnelles.",
+        "feature1": "Planification et analyse stratégique",
+        "feature2": "Conception créative et expérience utilisateur",
+        "feature3": "Développement Web et Mobile évolutif",
+        "feature4": "Marketing numérique axé sur les données",
+        "learn_more": "En savoir plus sur nous",
+        "years": "15+",
+        "exp_text": "Années <br/> d'expérience"
+    },
+    "services_home": {
+        "premium_solutions": "Solutions Premium",
+        "top_featured": "Top Vedettes",
+        "services_label": "Services",
+        "from": "À partir de",
+        "get_started": "Commencer",
+        "view_all": "Voir tous les services"
+    },
+    "categories": {
+        "video_animation": "Vidéo et animation",
+        "web_design": "Conception Web",
+        "graphics_design": "Graphisme et design",
+        "seo_marketing": "SEO et marketing",
+        "admin_support": "Support administratif",
+        "civil_architectural": "Génie civil et architecture"
+    },
+    "process": {
+        "sub_title": "PROCESSUS DE TRAVAIL",
+        "main_title": "Comment nous obtenons des résultats",
+        "step1_title": "Découverte",
+        "step1_desc": "Nous recherchons et analysons vos objectifs commerciaux et votre public cible.",
+        "step2_title": "Stratégie et conception",
+        "step2_desc": "Élaboration d'un plan stratégique et création de concepts visuels qui s'alignent sur votre marque.",
+        "step3_title": "Développement",
+        "step3_desc": "Nos experts construisent votre solution en utilisant des technologies modernes et un code propre.",
+        "step4_title": "Lancement et assistance",
+        "step4_desc": "Tests finaux, déploiement et maintenance continue pour un succès durable."
+    },
+    "why_choose": {
+        "sub_title": "Pourquoi choisir Brownsofts",
+        "main_title": "Propulser les entreprises avec des solutions <br /><span class='text-orange'>numériques évolutives, sécurisées et intelligentes</span>",
+        "f1_title": "Technologie Experte",
+        "f1_desc": "Votre partenaire technologique dédié pour des solutions numériques modernes.",
+        "f2_title": "Portée Mondiale",
+        "f2_desc": "Susciter le succès grâce à l'innovation numérique à l'échelle mondiale.",
+        "f3_title": "Centré sur le Client",
+        "f3_desc": "Nous accordons la priorité aux besoins de votre entreprise avec des stratégies sur mesure.",
+        "f4_title": "Services Sécurisés",
+        "f4_desc": "Gestion administrative et technique fiable et sûre.",
+        "f5_title": "Solutions Rapides",
+        "f5_desc": "Livraison rapide et efficace d'actifs numériques de haute qualité.",
+        "f6_title": "Assistance 24/7",
+        "f6_desc": "Une assistance dédiée pour assurer le bon fonctionnement de vos opérations."
+    },
+    "brand_collaboration": {
+        "sub_title": "COLLABORATIONS",
+        "main_title": "Choisir par marque"
+    },
+    "testimonials": {
+        "subtitle": "Témoignages",
+        "title_part1": "Ce que nos clients disent des services de ",
+        "title_part2": "Brownsofts",
+        "title_part3": "",
+        "items": [
+            {
+                "quote": "Brownsofts a transformé la présence numérique de notre marque. Leur équipe de montage vidéo et de conception web a dépassé nos attentes. Professionnels, créatifs et toujours à l'heure.",
+                "name": "Sarah Mitchell",
+                "role": "Directrice Marketing",
+                "company": "Luxury Brands Inc."
+            },
+            {
+                "quote": "Un service exceptionnel du début à la fin. Les rendus architecturaux 3D qu'ils ont produits pour notre projet nous ont aidés à obtenir des investisseurs majeurs. Un talent vraiment de classe mondiale.",
+                "name": "James Chen",
+                "role": "PDG",
+                "company": "Urban Development Co."
+            },
+            {
+                "quote": "Nous sommes partenaires de Brownsofts depuis plus de deux ans. Leur constance, leur créativité et leur engagement envers l'excellence en font notre référence pour toutes les solutions numériques.",
+                "name": "Emily Rodriguez",
+                "role": "Responsable Créative",
+                "company": "Studio Nova"
+            }
+        ]
+    },
+    "team": {
+        "sub_title": "RENCONTREZ NOS EXPERTS",
+        "main_title": "Équipe créative professionnelle",
+        "description": "Notre équipe talentueuse de professionnels se consacre à fournir l'excellence et l'innovation dans chaque projet que nous entreprenons.",
+        "members": [
+            { "name": "John Doe", "role": "PDG et fondateur" },
+            { "name": "Jane Smith", "role": "Directrice de création" },
+            { "name": "Robert Johnson", "role": "Développeur principal" },
+            { "name": "Emily Brown", "role": "Responsable marketing" }
+        ]
+    },
+    "blog": {
+        "title_part1": "Notre ",
+        "title_part2": "Blog",
+        "subtitle": "Aperçus, conseils et tendances de notre équipe d'experts pour aider votre entreprise à se développer.",
+        "read_more": "Lire la suite",
+        "posts": [
+            {
+                "title": "Top 10 des tendances du montage vidéo en 2026",
+                "excerpt": "Découvrez les dernières techniques et les styles qui dominent l'industrie de la production vidéo cette année.",
+                "date": "15 mai 2026",
+                "author": "John Doe"
+            },
+            {
+                "title": "Comment créer une page de destination à fort taux de conversion",
+                "excerpt": "Apprenez les éléments essentiels de la conception web qui transforment les visiteurs en clients fidèles.",
+                "date": "10 mai 2026",
+                "author": "Jane Smith"
+            },
+            {
+                "title": "L'avenir du SEO : au-delà des mots-clés",
+                "excerpt": "Découvrez comment l'IA et l'intention de l'utilisateur changent le paysage de l'optimisation pour les moteurs de recherche.",
+                "date": "05 mai 2026",
+                "author": "Mike Ross"
+            }
+        ]
+    },
+    "faq": {
+        "sub_title": "FAQs",
+        "main_title": "Questions fréquemment posées",
+        "questions": [
+            {
+                "question": "Ai-je besoin de connaissances en programmation pour gérer mon site web ?",
+                "answer": "Non ! Nos plateformes CMS sont conçues pour être faciles à utiliser. Avec des interfaces intuitives par glisser-déposer, vous pouvez gérer votre contenu sans aucune formation technique."
+            },
+            {
+                "question": "Qu'est-ce qui est inclus dans vos forfaits de conception web ?",
+                "answer": "Nos forfaits comprennent un nom de domaine gratuit, un certificat SSL sécurisé, un hébergement gratuit et 30 jours de mises à jour gratuites pour garantir que votre site reste à jour."
+            },
+            {
+                "question": "Comment votre marketing numérique génère-t-il des résultats ?",
+                "answer": "Nous utilisons une approche axée sur les résultats combinant des campagnes basées sur les données, l'optimisation SEO et des stratégies de médias sociaux pour accroître la notoriété de la marque."
+            },
+            {
+                "question": "Offrez-vous un support technique continu ?",
+                "answer": "Oui, nous offrons un support par e-mail et par chat 24h/24 et 7j/7. Notre équipe s'engage à satisfaire ses clients de manière inégalée et à établir des partenariats à long terme."
+            },
+            {
+                "question": "Pouvez-vous aider à la maintenance du commerce électronique ?",
+                "answer": "Absolument. Nous nous occupons des mises à jour logicielles, de la surveillance de la sécurité, des installations de plugins et de l'optimisation des performances pour des boutiques en ligne fonctionnant parfaitement."
+            }
+        ]
+    },
+    "contact": {
+        "sub_title": "Contactez-nous",
+        "main_title": "Prendre un consultant informatique gratuit",
+        "name_placeholder": "Votre nom*",
+        "email_placeholder": "E-mail*",
+        "phone_placeholder": "Votre téléphone",
+        "select_service": "Sélectionner un service",
+        "message_placeholder": "Votre message*",
+        "submit": "Envoyer maintenant"
+    },
+    "cta": {
+        "label": "COMMENÇONS QUELQUE CHOSE",
+        "title_part1": "Vous avez un projet en tête ?",
+        "title_part2": "Construisons-le ensemble.",
+        "text": "Transformez vos idées en réalité numérique. Notre équipe d'experts est prête à vous aider à faire évoluer votre entreprise avec une technologie de pointe et des solutions créatives.",
+        "ready_to_grow": "Prêt à grandir ?",
+        "get_free_consultation": "Obtenez une consultation gratuite et une estimation de projet dès aujourd'hui.",
+        "get_started_now": "Commencez maintenant"
+    },
+    "services_page": {
+        "sidebar_categories": "Catégories",
+        "category_all": "Toutes",
+        "sidebar_skills": "Compétences",
+        "all_skills": "Toutes les compétences",
+        "sidebar_delivery": "Délai de livraison",
+        "anytime": "N'importe quand",
+        "up_to_24h": "Jusqu'à 24 heures",
+        "up_to_3d": "Jusqu'à 3 jours",
+        "up_to_7d": "Jusqu'à 7 jours",
+        "max_price": "Prix max",
+        "sidebar_rating": "Évaluation",
+        "all_ratings": "Toutes les évaluations",
+        "stars_up": "Étoiles et plus",
+        "reset_filters": "Réinitialiser les filtres",
+        "purchase": "Acheter",
+        "sort_by": "Trier par",
+        "price_low_high": "Prix : du moins cher au plus cher",
+        "price_high_low": "Prix : du plus cher au moins cher",
+        "rating_high_low": "Note : la plus élevée en premier",
+        "skills_list": {
+            "video_editing": "Montage vidéo",
+            "logo_design": "Création de logo",
+            "react_dev": "Développement React",
+            "seo_opt": "Optimisation SEO"
+        }
+    },
+    "footer": {
+        "desc": "Autonomiser les entreprises grâce à une conception web experte, un marketing basé sur les données et des solutions informatiques innovantes depuis 2022.",
+        "quick_links": "Liens rapides",
+        "about_us": "À propos de nous",
+        "our_services": "Nos services",
+        "portfolio": "Portfolio",
+        "latest_news": "Dernières nouvelles",
+        "contact": "Contact",
+        "it_services": "Services informatiques",
+        "web_design_dev": "Conception et dév. Web",
+        "digital_marketing": "Marketing numérique",
+        "video_animation": "Animation vidéo",
+        "seo_optimization": "Optimisation SEO",
+        "admin_support": "Support administratif",
+        "get_in_touch": "Contactez-nous",
+        "copyright": "© 2026 Brownsofts. Tous droits réservés.",
+        "privacy_policy": "Politique de confidentialité",
+        "terms_conditions": "Conditions générales"
     }
 }

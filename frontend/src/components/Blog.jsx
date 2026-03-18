@@ -3,28 +3,23 @@ import { motion } from 'framer-motion';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import './Blog.css';
 import gridBg from "../assets/grid-bg.png";
+import { useTranslation } from 'react-i18next';
 
 const Blog = () => {
+    const { t } = useTranslation();
+    const translatedPosts = t('blog.posts', { returnObjects: true });
+    
     const posts = [
         {
-            title: 'Top 10 Video Editing Trends in 2026',
-            excerpt: 'Discover the latest techniques and styles that are dominating the video production industry this year.',
-            date: 'May 15, 2026',
-            author: 'John Doe',
+            ...translatedPosts[0],
             image: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80'
         },
         {
-            title: 'How to Build a High-Converting Landing Page',
-            excerpt: 'Learn the essential elements of web design that turn visitors into loyal customers.',
-            date: 'May 10, 2026',
-            author: 'Jane Smith',
+            ...translatedPosts[1],
             image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
         },
         {
-            title: 'The Future of SEO: Beyond Keywords',
-            excerpt: 'Explore how AI and user intent are changing the landscape of search engine optimization.',
-            date: 'May 05, 2026',
-            author: 'Mike Ross',
+            ...translatedPosts[2],
             image: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=800&q=80'
         }
     ];
@@ -39,7 +34,7 @@ const Blog = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="blog-title"
                     >
-                        Our <span>Blog</span>
+                        {t('blog.title_part1')}<span>{t('blog.title_part2')}</span>
                     </motion.h1>
 
                     <motion.p
@@ -48,7 +43,7 @@ const Blog = () => {
                         transition={{ delay: 0.2 }}
                         className="blog-subtitle"
                     >
-                        Insights, tips, and trends from our expert team to help your business grow.
+                        {t('blog.subtitle')}
                     </motion.p>
                 </div>
             </section>
@@ -84,7 +79,7 @@ const Blog = () => {
                                     <p>{post.excerpt}</p>
 
                                     <button className="read-more">
-                                        Read More <ArrowRight size={16} />
+                                        {t('blog.read_more')} <ArrowRight size={16} />
                                     </button>
                                 </div>
                             </motion.article>

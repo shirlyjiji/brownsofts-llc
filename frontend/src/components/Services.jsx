@@ -5,11 +5,22 @@ import { Star, ShoppingCart, ArrowLeft, Search as SearchIcon, ArrowRight } from 
 import './Services.css';
 import logo from '../assets/logo.png';
 import { serviceGigs, allCategories } from './data/ServicesData';
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
+    const { t } = useTranslation();
     const { category } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
+
+    const categoryTranslationMap = {
+        'Video & Animation': 'categories.video_animation',
+        'Web Design': 'categories.web_design',
+        'Graphics & Design': 'categories.graphics_design',
+        'SEO & Marketing': 'categories.seo_marketing',
+        'Admin Support': 'categories.admin_support',
+        'Civil & Architectural': 'categories.civil_architectural'
+    };
 
     const queryParams = new URLSearchParams(location.search);
     const searchTermFromUrl = queryParams.get('search') || '';
@@ -102,7 +113,7 @@ const Services = () => {
 
                         {/* Categories */}
                         <div className="sidebar-section">
-                            <h4 className="sidebar-heading">Categories</h4>
+                            <h4 className="sidebar-heading">{t('services_page.sidebar_categories')}</h4>
                             <ul className="sidebar-category-list">
                                 {categoriesList.map(cat => (
                                     <li key={cat}>
@@ -113,7 +124,7 @@ const Services = () => {
                                                 navigate(slug ? `/services/${slug}` : '/services');
                                             }}
                                         >
-                                            <ArrowRight size={14} /> {cat}
+                                            <ArrowRight size={14} /> {cat === 'All' ? t('services_page.category_all') : t(categoryTranslationMap[cat] || cat)}
                                         </button>
                                     </li>
                                 ))}
@@ -122,7 +133,7 @@ const Services = () => {
 
                         {/* Skills */}
                         <div className="sidebar-section">
-                            <h4 className="sidebar-heading">Skills</h4>
+                            <h4 className="sidebar-heading">{t('services_page.sidebar_skills')}</h4>
                             <select
                                 className="sidebar-dropdown"
                                 id="skill-filter"    // Added ID
@@ -130,17 +141,17 @@ const Services = () => {
                                 value={selectedSkill}
                                 onChange={(e) => setSelectedSkill(e.target.value)}
                             >
-                                <option value="">All Skills</option>
-                                <option value="Video Editing">Video Editing</option>
-                                <option value="Logo Design">Logo Design</option>
-                                <option value="React Development">React Development</option>
-                                <option value="SEO Optimization">SEO Optimization</option>
+                                <option value="">{t('services_page.all_skills')}</option>
+                                <option value="Video Editing">{t('services_page.skills_list.video_editing')}</option>
+                                <option value="Logo Design">{t('services_page.skills_list.logo_design')}</option>
+                                <option value="React Development">{t('services_page.skills_list.react_dev')}</option>
+                                <option value="SEO Optimization">{t('services_page.skills_list.seo_opt')}</option>
                             </select>
                         </div>
 
                         {/* Delivery */}
                         <div className="sidebar-section">
-                            <h4 className="sidebar-heading">Delivery Time</h4>
+                            <h4 className="sidebar-heading">{t('services_page.sidebar_delivery')}</h4>
                             <select
                                 className="sidebar-dropdown"
                                 id="delivery-filter" // Added ID
@@ -148,16 +159,16 @@ const Services = () => {
                                 value={selectedDeliveryTime}
                                 onChange={(e) => setSelectedDeliveryTime(e.target.value)}
                             >
-                                <option>Anytime</option>
-                                <option>Up to 24 hours</option>
-                                <option>Up to 3 days</option>
-                                <option>Up to 7 days</option>
+                                <option value="Anytime">{t('services_page.anytime')}</option>
+                                <option value="Up to 24 hours">{t('services_page.up_to_24h')}</option>
+                                <option value="Up to 3 days">{t('services_page.up_to_3d')}</option>
+                                <option value="Up to 7 days">{t('services_page.up_to_7d')}</option>
                             </select>
                         </div>
 
                         {/* Price */}
                         <div className="sidebar-section">
-                            <h4 className="sidebar-heading">Max Price: ${maxPrice}</h4>
+                            <h4 className="sidebar-heading">{t('services_page.max_price')}: ${maxPrice}</h4>
                             <input
                                 type="range"
                                 min="0"
@@ -171,7 +182,7 @@ const Services = () => {
 
                         {/* Rating */}
                         <div className="sidebar-section">
-                            <h4 className="sidebar-heading">Rating</h4>
+                            <h4 className="sidebar-heading">{t('services_page.sidebar_rating')}</h4>
                             {['all', '5', '4', '3'].map(rating => (
                                 <label key={rating} className="sidebar-radio">
                                     <input
@@ -179,13 +190,13 @@ const Services = () => {
                                         checked={selectedRating === rating}
                                         onChange={() => setSelectedRating(rating)}
                                     />
-                                    {rating === 'all' ? 'All Ratings' : `${rating} Stars & Up`}
+                                    {rating === 'all' ? t('services_page.all_ratings') : `${rating} ${t('services_page.stars_up')}`}
                                 </label>
                             ))}
                         </div>
 
                         <button className="sidebar-reset-btn" onClick={handleReset}>
-                            Reset Filters
+                            {t('services_page.reset_filters')}
                         </button>
                     </aside>
 
@@ -203,8 +214,11 @@ const Services = () => {
                                         <h3>{gig.title}</h3>
                                         <div className="service-card-footer">
                                             <span className="price">${gig.price}</span>
-                                            <button className="buy-btn">
-                                                <ShoppingCart size={14} /> Purchase
+                                            <button 
+                                                className="buy-btn"
+                                                onClick={() => navigate('/checkout', { state: { gig } })}
+                                            >
+                                                <ShoppingCart size={14} /> {t('services_page.purchase')}
                                             </button>
                                         </div>
                                     </div>

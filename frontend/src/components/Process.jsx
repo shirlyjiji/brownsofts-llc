@@ -1,34 +1,37 @@
 import React from 'react';
 import './Process.css';
 import { FaSearch, FaPalette, FaCode, FaRocket } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Process = () => {
+    const { t } = useTranslation();
+    
     const steps = [
         {
             id: 1,
-            title: "Discovery",
-            desc: "We research and analyze your business goals and target audience.",
+            title: t('process.step1_title'),
+            desc: t('process.step1_desc'),
             icon: <FaSearch />,
             color: "#001d3d"
         },
         {
             id: 2,
-            title: "Strategy & Design",
-            desc: "Crafting a strategic plan and creating visual concepts that align with your brand.",
+            title: t('process.step2_title'),
+            desc: t('process.step2_desc'),
             icon: <FaPalette />,
             color: "#ff5e14"
         },
         {
             id: 3,
-            title: "Development",
-            desc: "Our experts build your solution using modern technologies and clean code.",
+            title: t('process.step3_title'),
+            desc: t('process.step3_desc'),
             icon: <FaCode />,
             color: "#001d3d"
         },
         {
             id: 4,
-            title: "Launch & Support",
-            desc: "Final testing, deployment, and ongoing maintenance for sustained success.",
+            title: t('process.step4_title'),
+            desc: t('process.step4_desc'),
             icon: <FaRocket />,
             color: "#ff5e14"
         }
@@ -38,8 +41,8 @@ const Process = () => {
         <section className="process-section">
             <div className="container">
                 <div className="process-header text-center">
-                    <span className="sub-title">WORKING PROCESS</span>
-                    <h2 className="main-title">How We Deliver Results</h2>
+                    <span className="sub-title">{t('process.sub_title')}</span>
+                    <h2 className="main-title">{t('process.main_title')}</h2>
                 </div>
 
                 <div className="process-grid">

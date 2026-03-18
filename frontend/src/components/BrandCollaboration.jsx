@@ -1,5 +1,6 @@
 import React from 'react';
 import './BrandCollaboration.css';
+import { useTranslation } from 'react-i18next';
 import B1 from '../assets/Brands/B1.png';
 import B2 from '../assets/Brands/B2.png';
 import B3 from '../assets/Brands/B3.png';
@@ -8,6 +9,7 @@ import B5 from '../assets/Brands/B5.png';
 import B6 from '../assets/Brands/B6.png';
 
 const BrandCollaboration = () => {
+    const { t } = useTranslation();
     const brands = [
         { id: 1, name: "BIGCATFIRSTTODOIT", logo: B1 },
         { id: 2, name: "XPERT DEVELOPMENT", logo: B2 },
@@ -40,8 +42,8 @@ const BrandCollaboration = () => {
         <section className="brand-section">
             <div className="container">
                 <div className="collaboration-header text-center">
-                    <span className="sub-title">COLLABORATIONS</span>
-                    <h2 className="main-title">Choose by Brand</h2>
+                    <span className="sub-title">{t('brand_collaboration.sub_title')}</span>
+                    <h2 className="main-title">{t('brand_collaboration.main_title')}</h2>
                 </div>
             </div>
 

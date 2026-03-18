@@ -2,43 +2,24 @@ import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRight } from 'lucide-react';
 import './FAQContactSection.css';
+import { useTranslation } from 'react-i18next';
 
 const FAQContactSection = () => {
+    const { t } = useTranslation();
     const [activeFaq, setActiveFaq] = useState(null);
 
-    const faqData = [
-        {
-            question: "Do I need coding knowledge to manage my website?",
-            answer: "No! Our CMS platforms are designed for ease of use. With intuitive drag-and-drop interfaces, you can manage your content without any tech background."
-        },
-        {
-            question: "What is included in your web design packages?",
-            answer: "Our packages include a free domain, secure SSL certificate, free hosting, and 30 days of free updates to ensure your site stays current."
-        },
-        {
-            question: "How does your digital marketing drive results?",
-            answer: "We use a results-driven approach combining data-driven campaigns, SEO optimization, and social media strategies to increase brand awareness."
-        },
-        {
-            question: "Do you provide ongoing technical support?",
-            answer: "Yes, we offer 24/7 email and chat support. Our team is committed to unmatched client satisfaction and long-term partnerships."
-        },
-        {
-            question: "Can you help with e-commerce maintenance?",
-            answer: "Absolutely. We handle software updates, security monitoring, plugin installations, and performance optimization for flawlessly functioning online stores."
-        }
-    ];
+    const faqData = t('faq.questions', { returnObjects: true });
 
     return (
         <section className="br-faq-contact-section">
             <Container>
                 <Row className="g-5">
                     <Col lg={6}>
-                        <span className="br-section-tag">FAQs</span>
-                        <h2 className="display-6 fw-bold mb-5">Frequently Asked Question</h2>
+                        <span className="br-section-tag">{t('faq.sub_title')}</span>
+                        <h2 className="display-6 fw-bold mb-5">{t('faq.main_title')}</h2>
 
                         <div className="br-faq-list">
-                            {faqData.map((faq, i) => (
+                            {Array.isArray(faqData) && faqData.map((faq, i) => (
                                 <div key={i} className="br-faq-item">
                                     <div
                                         className={`br-faq-header ${activeFaq === i ? 'active' : ''}`}
@@ -61,16 +42,16 @@ const FAQContactSection = () => {
 
                     {/* Right Column: Contact Form */}
                     <Col lg={6}>
-                        <span className="br-section-tag">Get In Touch</span>
-                        <h2 className="display-6 fw-bold mb-5">Make An Free IT Consultant</h2>
+                        <span className="br-section-tag">{t('contact.sub_title')}</span>
+                        <h2 className="display-6 fw-bold mb-5">{t('contact.main_title')}</h2>
                         <form className="br-contact-form" onSubmit={(e) => e.preventDefault()}>
                             <Row className="g-3">
                                 <Col md={6}>
                                     <input
                                         type="text"
-                                        name="user_name"  // Added name
-                                        id="user_name"    // Added id
-                                        placeholder="Your Name*"
+                                        name="user_name"
+                                        id="user_name"
+                                        placeholder={t('contact.name_placeholder')}
                                         required
                                         className="br-input"
                                     />
@@ -78,9 +59,9 @@ const FAQContactSection = () => {
                                 <Col md={6}>
                                     <input
                                         type="email"
-                                        name="user_email" // Added name
-                                        id="user_email"   // Added id
-                                        placeholder="Mail*"
+                                        name="user_email"
+                                        id="user_email"
+                                        placeholder={t('contact.email_placeholder')}
                                         required
                                         className="br-input"
                                     />
@@ -88,36 +69,36 @@ const FAQContactSection = () => {
                                 <Col md={6}>
                                     <input
                                         type="text"
-                                        name="user_phone" // Added name
-                                        id="user_phone"   // Added id
-                                        placeholder="Your Phone"
+                                        name="user_phone"
+                                        id="user_phone"
+                                        placeholder={t('contact.phone_placeholder')}
                                         className="br-input"
                                     />
                                 </Col>
                                 <Col md={6}>
                                     <select
-                                        name="service_type" // Added name
-                                        id="service_type"   // Added id
+                                        name="service_type"
+                                        id="service_type"
                                         className="br-select"
                                     >
-                                        <option value="">Select Service</option>
-                                        <option value="web-design">Web Design</option>
-                                        <option value="it-consulting">IT Consulting</option>
-                                        <option value="digital-marketing">Digital Marketing</option>
+                                        <option value="">{t('contact.select_service')}</option>
+                                        <option value="web-design">{t('categories.web_design')}</option>
+                                        <option value="it-consulting">{t('categories.admin_support')}</option>
+                                        <option value="digital-marketing">{t('categories.seo_marketing')}</option>
                                     </select>
                                 </Col>
                                 <Col xs={12}>
                                     <textarea
-                                        name="message"      // Added name
-                                        id="message"        // Added id
+                                        name="message"
+                                        id="message"
                                         rows="4"
-                                        placeholder="Your Message*"
+                                        placeholder={t('contact.message_placeholder')}
                                         className="br-textarea"
                                     ></textarea>
                                 </Col>
                             </Row>
                             <button type="submit" className="br-submit-btn">
-                                Submit Now <ArrowRight size={18} />
+                                {t('contact.submit')} <ArrowRight size={18} />
                             </button>
                         </form>
                     </Col>

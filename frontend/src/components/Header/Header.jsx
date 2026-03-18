@@ -1,20 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 import { FaChevronDown, FaPaperPlane, FaGlobeAmericas } from 'react-icons/fa';
 import { FiFacebook, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi';
-import { HiOutlineUserCircle, HiMenu, HiX } from 'react-icons/hi';
+import { 
+    HiOutlineUserCircle, HiMenu, HiX, 
+    HiOutlineHome, HiOutlineInformationCircle, 
+    HiOutlineBriefcase, HiOutlineBookOpen 
+} from 'react-icons/hi';
 import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { serviceGigs } from '../data/ServicesData';
 
 const Header = () => {
     const { t, i18n } = useTranslation();
+    
+    // Define categories for the dropdown as per the requested design
+    const categories = [
+        { title: 'Video & Animation', slug: 'video-animation', img: serviceGigs.find(s => s.category === 'Video & Animation')?.image },
+        { title: 'Web Design', slug: 'web-design', img: serviceGigs.find(s => s.category === 'Web Design')?.image },
+        { title: 'Graphic Design', slug: 'graphic-design', img: serviceGigs.find(s => s.category === 'Graphics & Design')?.image },
+        { title: 'Digital Marketing', slug: 'digital-marketing', img: serviceGigs.find(s => s.category === 'SEO & Marketing')?.image },
+        { title: 'Admin Support', slug: 'admin-support', img: serviceGigs.find(s => s.category === 'Admin Support')?.image },
+    ];
+
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
     const [isGlobalOpen, setIsGlobalOpen] = useState(false);
     const [currentLang, setCurrentLang] = useState(i18n.language.toUpperCase().split('-')[0]);
     const [currentRegion, setCurrentRegion] = useState('Global');
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 1023) {
+                setIsMobileMenuOpen(false);
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const changeLanguage = (code) => {
         i18n.changeLanguage(code.toLowerCase());
@@ -119,63 +144,87 @@ const Header = () => {
                     {/* Navigation */}
                     <nav className={`main-nav ${isMobileMenuOpen ? 'mobile-active' : ''}`}>
                         
-                        {isMobileMenuOpen && (
-                            <div className="mobile-menu-header">
-                                <img src={logo} alt="Logo" className="logo-img" />
-                                <button className="close-menu" onClick={toggleMobileMenu}><HiX /></button>
-                            </div>
-                        )}
-                        <a href="/" onClick={() => setIsMobileMenuOpen(false)}>{t('header.home')}</a>
-                        <a href="#" onClick={() => setIsMobileMenuOpen(false)}>{t('header.about')}</a>
+                        <div className="mobile-menu-header">
+                            <img src={logo} alt="Logo" className="logo-img" />
+                            <button className="close-menu" onClick={toggleMobileMenu}><HiX /></button>
+                        </div>
+                        
+                        <div className="mobile-nav-links">
+                            <Link to="/" className="nav-item" onClick={() => setIsMobileMenuOpen(false)}>
+                                <span className="item-content">
+                                    <HiOutlineHome className="mobile-icon" /> {t('header.home')}
+                                </span>
+                            </Link>
+                            
+                            <Link to="/about" className="nav-item" onClick={() => setIsMobileMenuOpen(false)}>
+                                <span className="item-content">
+                                    <HiOutlineInformationCircle className="mobile-icon" /> {t('header.about')}
+                                </span>
+                            </Link>
 
-                        <div className={`nav-item-dropdown ${isServicesOpen ? 'active' : ''}`}>
-                            <a href="/services" className="has-dropdown" onClick={toggleServices}>
-                                {t('header.services')} <FaChevronDown className={`nav-arrow ${isServicesOpen ? 'rotated' : ''}`} />
-                            </a>
+                            <div className={`megamenu-trigger ${isServicesOpen ? 'active' : ''}`}>
+                                <Link to="/services" className="has-dropdown nav-item" onClick={(e) => {
+                                    if (window.innerWidth <= 1023) {
+                                        e.preventDefault();
+                                        toggleServices(e);
+                                    } else {
+                                        setIsMobileMenuOpen(false);
+                                    }
+                                }}>
+                                    <span className="item-content">
+                                        <HiOutlineBriefcase className="mobile-icon" /> {t('header.services')}
+                                    </span>
+                                    <FaChevronDown className={`nav-arrow ${isServicesOpen ? 'rotated' : ''}`} />
+                                </Link>
 
-                            {isServicesOpen && (
-                                <div className="services-dropdown">
-                                    <h3 className="dropdown-title">{t('header.popular_categories')}</h3>
+                                <div className="megamenu-dropdown">
+                                    <div className="megamenu-header">
+                                        <h3 className="megamenu-title">{t('header.popular_categories')}</h3>
+                                    </div>
                                     <div className="dropdown-grid">
-                                        {(typeof services !== 'undefined' ? services : []).map((service) => {
-                                            const slug = service.title
-                                                .toLowerCase()
-                                                .replace(/ & /g, '-')
-                                                .replace(/\s+/g, '-');
-
-                                            return (
+                                        {categories.map((cat) => (
+                                            <div key={cat.title} className="megamenu-card">
                                                 <Link
-                                                    key={service.title}
-                                                    to={`/services/${slug}`}
-                                                    className="dropdown-item"
+                                                    to={`/services/${cat.slug}`}
+                                                    className="megamenu-card-link"
                                                     onClick={() => {
                                                         setIsServicesOpen(false);
                                                         setIsMobileMenuOpen(false);
                                                     }}
                                                 >
-                                                    <div className="item-img-container">
-                                                        <img src={service.img} alt={service.title} />
+                                                    <div className="megamenu-card-img-wrapper">
+                                                        <img src={cat.img} alt={cat.title} />
                                                     </div>
-                                                    <div className="item-content">
-                                                        <h4>{service.title}</h4>
-                                                        <p>240 {t('header.items_available')}</p>
+                                                    <div>
+                                                        <div className="category-name">{cat.title}</div>
+                                                        <div className="item-count">240 {t('header.items_available')}</div>
                                                     </div>
                                                 </Link>
-                                            );
-                                        })}
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
-                            )}
+                            </div>
+
+                            <Link to="/blog" className="nav-item" onClick={() => setIsMobileMenuOpen(false)}>
+                                <span className="item-content">
+                                    <HiOutlineBookOpen className="mobile-icon" /> {t('header.blog')}
+                                </span>
+                            </Link>
                         </div>
 
-                        <a href="#" onClick={() => setIsMobileMenuOpen(false)}>{t('header.blog')}</a>
 
-
-                        {isMobileMenuOpen && (
-                            <div className="mobile-menu-footer">
-                                <button className="cta-button w-full">{t('header.lets_talk')}</button>
+                        <div className="mobile-menu-footer">
+                            <Link to="/contact" className="cta-button w-full" onClick={() => setIsMobileMenuOpen(false)}>
+                                {t('header.lets_talk')}
+                            </Link>
+                            <div className="mobile-socials">
+                                <a href="https://www.facebook.com/brownsofts"><FiFacebook /></a>
+                                <a href="https://x.com/brownsofts"><FiTwitter /></a>
+                                <a href="https://www.instagram.com/brownsoftsllc/"><FiInstagram /></a>
+                                <a href="https://www.linkedin.com/company/brownsoftsllc"><FiLinkedin /></a>
                             </div>
-                        )}
+                        </div>
                     </nav>
 
                     <div className="header-actions">
@@ -183,9 +232,9 @@ const Header = () => {
                             <HiOutlineUserCircle className="user-icon" />
                             <span className="hide-mobile">{t('header.login')}</span>
                         </div>
-                        <button className="cta-button hide-mobile">
+                        <Link to="/contact" className="cta-button hide-mobile" style={{ textDecoration: 'none' }}>
                             <FaPaperPlane className="plane-icon" /> {t('header.lets_talk')}
-                        </button>
+                        </Link>
                         <button className="mobile-toggle" onClick={toggleMobileMenu}>
                             <HiMenu />
                         </button>

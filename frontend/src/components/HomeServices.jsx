@@ -6,10 +6,21 @@ import logo from "../assets/logo.png";
 import { serviceGigs, allCategories } from "./data/ServicesData";
 import gridBg from "../assets/grid-bg.png";
 import "./HomeServices.css";
+import { useTranslation } from "react-i18next";
 
 const HomeServices = () => {
+    const { t } = useTranslation();
     const navigate = useNavigate();
     const [activeCategory, setActiveCategory] = useState("Video & Animation");
+
+    const categoryTranslationMap = {
+        'Video & Animation': 'categories.video_animation',
+        'Web Design': 'categories.web_design',
+        'Graphics & Design': 'categories.graphics_design',
+        'SEO & Marketing': 'categories.seo_marketing',
+        'Admin Support': 'categories.admin_support',
+        'Civil & Architectural': 'categories.civil_architectural'
+    };
 
     const filteredServices = serviceGigs
         .filter((s) => s.category === activeCategory)
@@ -29,7 +40,7 @@ const HomeServices = () => {
                         viewport={{ once: true }}
                         className="services-subtitle"
                     >
-                        Premium Solutions
+                        {t('services_home.premium_solutions')}
                     </motion.span>
 
                     <motion.h2
@@ -38,7 +49,7 @@ const HomeServices = () => {
                         viewport={{ once: true }}
                         className="services-title"
                     >
-                        Top Featured <span>Services</span>
+                        {t('services_home.top_featured')} <span>{t('services_home.services_label')}</span>
                     </motion.h2>
                 </div>
 
@@ -51,7 +62,7 @@ const HomeServices = () => {
                             className={`category-btn ${activeCategory === cat ? "active" : ""
                                 }`}
                         >
-                            {cat}
+                            {t(categoryTranslationMap[cat] || cat)}
                         </button>
                     ))}
                 </div>
@@ -87,7 +98,7 @@ const HomeServices = () => {
 
                                     <div className="service-footer">
                                         <div className="price">
-                                            <span className="from">From</span>
+                                            <span className="from">{t('services_home.from')}</span>
                                             <span className="amount">${service.price}</span>
                                         </div>
 
@@ -101,7 +112,7 @@ const HomeServices = () => {
                                                 )
                                             }
                                         >
-                                            Get Started
+                                            {t('services_home.get_started')}
                                         </button>
                                     </div>
                                 </div>
@@ -116,7 +127,7 @@ const HomeServices = () => {
                         className="view-all-btn"
                         onClick={() => navigate("/services")}
                     >
-                        View All Services <ArrowRight size={18} />
+                        {t('services_home.view_all')} <ArrowRight size={18} />
                     </button>
                 </div>
             </div>

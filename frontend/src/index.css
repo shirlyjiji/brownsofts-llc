@@ -19,3 +19,45 @@ body {
     background-color: var(--bg-light);
     overflow-x: hidden;
 }
+
+.btn-solid {
+    background: #ff5e14; /* Using brand orange */
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(255, 94, 20, 0.2);
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-solid:hover {
+    transform: translateY(-5px);
+    background: #001d3d; /* Dark blue */
+    color: white;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #ff5e14;
+    border: 2px solid #ff5e14;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-outline:hover {
+    background: #ff5e14;
+    color: white;
+}

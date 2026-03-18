@@ -10,7 +10,8 @@
         "lets_talk": "HABLEMOS",
         "login": "Iniciar sesión",
         "popular_categories": "CATEGORÍAS POPULARES",
-        "items_available": "Artículos disponibles"
+        "items_available": "Artículos disponibles",
+        "dropdown_footer": "Explore nuestra selección curada de servicios digitales de alta gama"
     },
     "hero": {
         "get_started": "Empezar",
@@ -35,5 +36,219 @@
                 "desc": "Ayudamos a las empresas a crecer mediante SEO basado en datos y producción de video de alta gama. Llegue a su audiencia con contenido que realmente resuene."
             }
         ]
+    },
+    "about": {
+        "sub_title": "SOBRE NUESTRA EMPRESA",
+        "main_title": "Somos más que una agencia digital",
+        "description": "En Brownsofts LLC, combinamos creatividad con experiencia técnica para ayudar a las empresas a navegar por el panorama digital. Nuestra misión es proporcionar soluciones innovadoras que impulsen el crecimiento y brinden experiencias de usuario excepcionales.",
+        "feature1": "Planificación y análisis estratégico",
+        "feature2": "Diseño creativo y experiencia de usuario",
+        "feature3": "Desarrollo web y móvil escalable",
+        "feature4": "Marketing digital basado en datos",
+        "learn_more": "Saber más sobre nosotros",
+        "years": "15+",
+        "exp_text": "Años de <br/> experiencia"
+    },
+    "services_home": {
+        "premium_solutions": "Soluciones Premium",
+        "top_featured": "Principales",
+        "services_label": "Servicios",
+        "from": "Desde",
+        "get_started": "Empezar",
+        "view_all": "Ver todos los servicios"
+    },
+    "categories": {
+        "video_animation": "Video y animación",
+        "web_design": "Diseño web",
+        "graphics_design": "Gráficos y diseño",
+        "seo_marketing": "SEO y marketing",
+        "admin_support": "Soporte administrativo",
+        "civil_architectural": "Civil y arquitectura"
+    },
+    "process": {
+        "sub_title": "PROCESO DE TRABAJO",
+        "main_title": "Cómo entregamos resultados",
+        "step1_title": "Descubrimiento",
+        "step1_desc": "Investigamos y analizamos sus objetivos comerciales y su público objetivo.",
+        "step2_title": "Estrategia y diseño",
+        "step2_desc": "Elaboración de un plan estratégico y creación de conceptos visuales que se alineen con su marca.",
+        "step3_title": "Desarrollo",
+        "step3_desc": "Nuestros expertos construyen su solución utilizando tecnologías modernas y código limpio.",
+        "step4_title": "Lanzamiento y soporte",
+        "step4_desc": "Pruebas finales, implementación y mantenimiento continuo para un éxito sostenido."
+    },
+    "why_choose": {
+        "sub_title": "Por qué elegir Brownsofts",
+        "main_title": "Potenciando empresas con soluciones <br /><span class='text-orange'>digitales escalables, seguras e inteligentes</span>",
+        "f1_title": "Tecnología experta",
+        "f1_desc": "Su socio tecnológico dedicado para soluciones digitales modernas.",
+        "f2_title": "Alcance global",
+        "f2_desc": "Impulsando el éxito a través de la innovación digital a escala global.",
+        "f3_title": "Centrado en el cliente",
+        "f3_desc": "Priorizamos las necesidades de su negocio con estrategias a medida.",
+        "f4_title": "Servicios seguros",
+        "f4_desc": "Gestión administrativa y técnica fiable y segura.",
+        "f5_title": "Soluciones rápidas",
+        "f5_desc": "Entrega rápida y eficiente de activos digitales de alta calidad.",
+        "f6_title": "Soporte 24/7",
+        "f6_desc": "Asistencia dedicada para que sus operaciones sigan funcionando sin problemas."
+    },
+    "brand_collaboration": {
+        "sub_title": "COLABORACIONES",
+        "main_title": "Elegir por marca"
+    },
+    "testimonials": {
+        "subtitle": "Testimonios",
+        "title_part1": "Lo que dicen nuestros clientes sobre los servicios de ",
+        "title_part2": "Brownsofts",
+        "title_part3": "",
+        "items": [
+            {
+                "quote": "Brownsofts transformó la presencia digital de nuestra marca. Su equipo de edición de video y diseño web superó nuestras expectativas. Profesionales, creativos y siempre a tiempo.",
+                "name": "Sarah Mitchell",
+                "role": "Directora de Marketing",
+                "company": "Luxury Brands Inc."
+            },
+            {
+                "quote": "Servicio excepcional de principio a fin. Los renders arquitectónicos en 3D que produjeron para nuestro proyecto nos ayudaron a asegurar grandes inversores. Un talento de clase mundial.",
+                "name": "James Chen",
+                "role": "CEO",
+                "company": "Urban Development Co."
+            },
+            {
+                "quote": "Nos hemos asociado con Brownsofts por más de dos años. Su consistencia, creatividad y compromiso con la excelencia los convierten en nuestra opción preferida para todas las soluciones digitales.",
+                "name": "Emily Rodriguez",
+                "role": "Líder Creativa",
+                "company": "Studio Nova"
+            }
+        ]
+    },
+    "team": {
+        "sub_title": "CONOZCA A NUESTROS EXPERTOS",
+        "main_title": "Equipo creativo profesional",
+        "description": "Nuestro talentoso equipo de profesionales se dedica a ofrecer excelencia e innovación en cada proyecto que emprendemos.",
+        "members": [
+            { "name": "John Doe", "role": "CEO y Fundador" },
+            { "name": "Jane Smith", "role": "Directora Creativa" },
+            { "name": "Robert Johnson", "role": "Desarrollador Principal" },
+            { "name": "Emily Brown", "role": "Gerente de Marketing" }
+        ]
+    },
+    "blog": {
+        "title_part1": "Nuestro ",
+        "title_part2": "Blog",
+        "subtitle": "Ideas, consejos y tendencias de nuestro equipo de expertos para ayudar a que su negocio crezca.",
+        "read_more": "Leer más",
+        "posts": [
+            {
+                "title": "Las 10 principales tendencias de edición de video en 2026",
+                "excerpt": "Descubra las últimas técnicas y estilos que están dominando la industria de la producción de video este año.",
+                "date": "15 de mayo de 2026",
+                "author": "John Doe"
+            },
+            {
+                "title": "Cómo crear una página de destino de alta conversión",
+                "excerpt": "Conozca los elementos esenciales del diseño web que convierten a los visitantes en clientes leales.",
+                "date": "10 de mayo de 2026",
+                "author": "Jane Smith"
+            },
+            {
+                "title": "El futuro del SEO: más allá de las palabras clave",
+                "excerpt": "Explore cómo la IA y la intención del usuario están cambiando el panorama de la optimización de motores de búsqueda.",
+                "date": "05 de mayo de 2026",
+                "author": "Mike Ross"
+            }
+        ]
+    },
+    "faq": {
+        "sub_title": "Preguntas frecuentes",
+        "main_title": "Preguntas frecuentes",
+        "questions": [
+            {
+                "question": "¿Necesito conocimientos de programación para gestionar mi sitio web?",
+                "answer": "¡No! Nuestras plataformas CMS están diseñadas para ser fáciles de usar. Con interfaces intuitivas de arrastrar y soltar, puede gestionar su contenido sin conocimientos técnicos."
+            },
+            {
+                "question": "¿Qué se incluye en sus paquetes de diseño web?",
+                "answer": "Nuestros paquetes incluyen un dominio gratuito, certificado SSL seguro, alojamiento gratuito y 30 días de actualizaciones gratuitas para garantizar que su sitio se mantenga al día."
+            },
+            {
+                "question": "¿Cómo genera resultados su marketing digital?",
+                "answer": "Utilizamos un enfoque orientado a resultados que combina campañas basadas en datos, optimización SEO y estrategias de redes sociales para aumentar el conocimiento de la marca."
+            },
+            {
+                "question": "¿Ofrecen soporte técnico continuo?",
+                "answer": "Sí, ofrecemos soporte por correo electrónico y chat las 24 horas, los 7 días de la semana. Nuestro equipo está comprometido con una satisfacción del cliente inigualable y asociaciones a largo plazo."
+            },
+            {
+                "question": "¿Pueden ayudar con el mantenimiento del comercio electrónico?",
+                "answer": "Absolutamente. Nos encargamos de las actualizaciones de software, el monitoreo de seguridad, las instalaciones de complementos y la optimización del rendimiento para tiendas en línea que funcionen sin problemas."
+            }
+        ]
+    },
+    "contact": {
+        "sub_title": "Ponerse en contacto",
+        "main_title": "Realizar una consulta de TI gratuita",
+        "name_placeholder": "Su nombre*",
+        "email_placeholder": "Correo electrónico*",
+        "phone_placeholder": "Su teléfono",
+        "select_service": "Seleccionar servicio",
+        "message_placeholder": "Su mensaje*",
+        "submit": "Enviar ahora"
+    },
+    "cta": {
+        "label": "COMENCEMOS ALGO",
+        "title_part1": "¿Tiene un proyecto en mente?",
+        "title_part2": "Construyámoslo juntos.",
+        "text": "Transforme sus ideas en realidad digital. Nuestro equipo de expertos está listo para ayudarlo a escalar su negocio con tecnología de vanguardia y soluciones creativas.",
+        "ready_to_grow": "¿Listo para crecer?",
+        "get_free_consultation": "Obtenga una consulta gratuita y una estimación del proyecto hoy mismo.",
+        "get_started_now": "Empiece ahora"
+    },
+    "services_page": {
+        "sidebar_categories": "Categorías",
+        "category_all": "Todas",
+        "sidebar_skills": "Habilidades",
+        "all_skills": "Todas las habilidades",
+        "sidebar_delivery": "Tiempo de entrega",
+        "anytime": "En cualquier momento",
+        "up_to_24h": "Hasta 24 horas",
+        "up_to_3d": "Hasta 3 días",
+        "up_to_7d": "Hasta 7 días",
+        "max_price": "Precio máximo",
+        "sidebar_rating": "Calificación",
+        "all_ratings": "Todas las calificaciones",
+        "stars_up": "Estrellas y más",
+        "reset_filters": "Restablecer filtros",
+        "purchase": "Comprar",
+        "sort_by": "Ordenar por",
+        "price_low_high": "Precio: de menor a mayor",
+        "price_high_low": "Precio: de mayor a menor",
+        "rating_high_low": "Calificación: de mayor a menor",
+        "skills_list": {
+            "video_editing": "Edición de video",
+            "logo_design": "Diseño de logotipos",
+            "react_dev": "Desarrollo React",
+            "seo_opt": "Optimización SEO"
+        }
+    },
+    "footer": {
+        "desc": "Empoderando a las empresas con diseño web experto, marketing basado en datos y soluciones de TI innovadoras desde 2022.",
+        "quick_links": "Enlaces rápidos",
+        "about_us": "Sobre nosotros",
+        "our_services": "Nuestros servicios",
+        "portfolio": "Portafolio",
+        "latest_news": "Últimas noticias",
+        "contact": "Contacto",
+        "it_services": "Servicios de TI",
+        "web_design_dev": "Diseño y desarrollo web",
+        "digital_marketing": "Marketing digital",
+        "video_animation": "Animación de video",
+        "seo_optimization": "Optimización SEO",
+        "admin_support": "Soporte administrativo",
+        "get_in_touch": "Ponerse en contacto",
+        "copyright": "© 2026 Brownsofts. Todos los derechos reservados.",
+        "privacy_policy": "Política de privacidad",
+        "terms_conditions": "Términos y condiciones"
     }
 }
