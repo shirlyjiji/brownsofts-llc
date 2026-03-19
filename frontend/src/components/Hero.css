@@ -57,6 +57,7 @@
 .content-block {
     padding-left: 120px;
     z-index: 2;
+    margin-top: -100px;
 }
 
 .slide-up {
@@ -215,13 +216,15 @@
     position: absolute;
     inset: 0;
     opacity: 0;
-    transform: scale(1.1); /* Start slightly larger to zoom 'in' smoothly */
+    transform: scale(1.1);
+    /* Start slightly larger to zoom 'in' smoothly */
 }
 
 /* Active state for the images */
 .image-active {
     opacity: 1;
-    transform: scale(1); /* Smoothly settle to normal size */
+    transform: scale(1);
+    /* Smoothly settle to normal size */
     z-index: 2;
 }
 
@@ -304,15 +307,15 @@
 /* Stats Card - Updated to Horizontal Row */
 .stats-card {
     position: absolute;
-    bottom: 80px;
+    bottom: 130px;
     /* Adjusting to overlap the bottom like the screenshot */
-    left: 120px;
-    background: var(--glass-bg);
+    left: 93px;
+    background: transparent;
     backdrop-filter: blur(12px);
     padding: 20px 20px;
     border-radius: 20px;
     z-index: 100;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); */
     border: 1px solid rgba(255, 255, 255, 0.4);
     display: flex;
     /* Makes it a row */
@@ -466,7 +469,7 @@
         /* Changed from 0.7 to 0.9 or 1 to prevent it from looking tiny */
         transform: scale(1.2);
         margin-bottom: 20px;
-        
+
     }
 
     .stats-card {
