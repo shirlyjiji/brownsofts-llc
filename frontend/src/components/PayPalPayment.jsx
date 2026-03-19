@@ -8,7 +8,7 @@ const PayPalPayment = ({ amount, serviceName }) => {
 
     const createOrder = async (data, actions) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/paypal/create-order', {
+            const response = await axios.post('https://brownsoftsllc-backend-zjvh.onrender.com/api/paypal/create-order', {
                 amount: amount,
                 gigId: serviceName
             });
@@ -21,10 +21,10 @@ const PayPalPayment = ({ amount, serviceName }) => {
 
     const onApprove = async (data, actions) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/paypal/capture-order', {
+            const response = await axios.post('https://brownsoftsllc-backend-zjvh.onrender.com/api/paypal/capture-order', {
                 orderId: data.orderID
             });
-            
+
             navigate("/success", {
                 state: {
                     serviceName,
